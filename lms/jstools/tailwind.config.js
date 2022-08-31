@@ -157,29 +157,29 @@ module.exports = {
     },
     flexGrow: { 0: '0', DEFAULT: '1' },
     flexShrink: { 0: '0', DEFAULT: '1' },
-    fontFamily: {
-      sans: ['"Lato"', ...o],
-      lato: ['"Lato"', ...o],
-      roboto: ['"Roboto Condensed"', ...o],
-      serif: [
-        'ui-serif',
-        'Georgia',
-        'Cambria',
-        '"Times New Roman"',
-        'Times',
-        'serif'
-      ],
-      mono: [
-        'ui-monospace',
-        'SFMono-Regular',
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        '"Liberation Mono"',
-        '"Courier New"',
-        'monospace'
-      ]
-    },
+    // fontFamily: {
+    //   sans: ['"Lato"', ...o],
+    //   lato: ['"Lato"', ...o],
+    //   roboto: ['"Roboto Condensed"', ...o],
+    //   serif: [
+    //     'ui-serif',
+    //     'Georgia',
+    //     'Cambria',
+    //     '"Times New Roman"',
+    //     'Times',
+    //     'serif'
+    //   ],
+    //   mono: [
+    //     'ui-monospace',
+    //     'SFMono-Regular',
+    //     'Menlo',
+    //     'Monaco',
+    //     'Consolas',
+    //     '"Liberation Mono"',
+    //     '"Courier New"',
+    //     'monospace'
+    //   ]
+    // },
     fontSize: {
       xxs: ['0.625rem', { lineHeight: '1rem' }],
       xs: ['0.75rem', { lineHeight: '1rem' }],
