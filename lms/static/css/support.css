@@ -1,0 +1,6 @@
+.global-header .nav-links .main .nav-tab a {
+  color: #fff;
+}
+.toggle-user-dropdown .fa-caret-down:before {
+  color: #fff;
+}
