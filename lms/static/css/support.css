@@ -1,6 +1,210 @@
 .global-header .nav-links .main .nav-tab a {
-  color: #fff;
+  color: #fff !important;
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-weight: bold !important;
 }
 .toggle-user-dropdown .fa-caret-down:before {
   color: #fff;
+}
+footer a {
+  color: #000 !important;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+.verification-process
+  .report-receipt-provider
+  .provider-buttons-logos
+  .complete-order
+  button,
+.dashboard .main-container .my-courses .course .details .enter-course,
+.wrapper-messages-primary .message.message-upsell .action-view-consent,
+.wrapper-messages-primary .message.message-status .verification-cta .btn,
+.wrapper-messages-primary .message.message-status .credit-action .credit-btn,
+.btn-secondary,
+.dashboard .main-container .my-courses .course .details .enter-course.archived,
+.wrapper-messages-primary .message.message-upsell .action-view-consent.archived,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .field
+  .u-field-link,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .u-field-order
+  .u-field-order-link
+  .u-field-link,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .u-field-order-lines
+  .u-field-order-link
+  .u-field-link,
+.account-settings-sections
+  .section
+  .account-deletion-details
+  .btn-outline-primary,
+.account-settings-sections
+  .section
+  .account-deletion-details
+  .delete-confirmation-wrapper
+  .paragon__modal-footer
+  .paragon__btn-outline-primary,
+.account-settings-message .alert-message .alert-actions .btn-alert-secondary,
+.courseware-bookmarks-button .bookmarks-list-button {
+  border: 1px solid #000 !important;
+  border-radius: 2px !important;
+  color: #ec5713 !important;
+}
+.dashboard .main-container .my-courses .course .details .enter-course,
+.wrapper-messages-primary .message.message-upsell .action-view-consent {
+  color: #000 !important;
+}
+.verification-process
+  .report-receipt-provider
+  .provider-buttons-logos
+  .complete-order
+  button:hover,
+.dashboard .main-container .my-courses .course .details .enter-course:hover,
+.wrapper-messages-primary .message.message-upsell .action-view-consent:hover,
+.wrapper-messages-primary .message.message-status .verification-cta .btn:hover,
+.wrapper-messages-primary
+  .message.message-status
+  .credit-action
+  .credit-btn:hover,
+.btn-secondary:hover,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .field
+  .u-field-link:hover,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .u-field-order
+  .u-field-order-link
+  .u-field-link:hover,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .u-field-order-lines
+  .u-field-order-link
+  .u-field-link:hover,
+.account-settings-sections
+  .section
+  .account-deletion-details
+  .btn-outline-primary:hover,
+.account-settings-sections
+  .section
+  .account-deletion-details
+  .delete-confirmation-wrapper
+  .paragon__modal-footer
+  .paragon__btn-outline-primary:hover,
+.account-settings-message
+  .alert-message
+  .alert-actions
+  .btn-alert-secondary:hover,
+.courseware-bookmarks-button .bookmarks-list-button:hover,
+.verification-process
+  .report-receipt-provider
+  .provider-buttons-logos
+  .complete-order
+  button:focus,
+.dashboard .main-container .my-courses .course .details .enter-course:focus,
+.wrapper-messages-primary .message.message-upsell .action-view-consent:focus,
+.wrapper-messages-primary .message.message-status .verification-cta .btn:focus,
+.wrapper-messages-primary
+  .message.message-status
+  .credit-action
+  .credit-btn:focus,
+.btn-secondary:focus,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .field
+  .u-field-link:focus,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .u-field-order
+  .u-field-order-link
+  .u-field-link:focus,
+.account-settings-sections
+  .section
+  .account-settings-section-body
+  .u-field
+  .u-field-order-lines
+  .u-field-order-link
+  .u-field-link:focus,
+.account-settings-sections
+  .section
+  .account-deletion-details
+  .btn-outline-primary:focus,
+.account-settings-sections
+  .section
+  .account-deletion-details
+  .delete-confirmation-wrapper
+  .paragon__modal-footer
+  .paragon__btn-outline-primary:focus,
+.account-settings-message
+  .alert-message
+  .alert-actions
+  .btn-alert-secondary:focus,
+.courseware-bookmarks-button .bookmarks-list-button:focus {
+  background-color: #ec5713 !important;
+}
+@media (min-width: 992px) {
+  .global-header .nav-links .main .nav-tab a {
+    border-bottom: 2px solid transparent !important;
+  }
+  .global-header .nav-links .main .nav-tab a {
+    padding: 7px 0 0px !important;
+    margin: 0 20px;
+  }
+  .global-header .nav-links .main .nav-tab a.active,
+  .global-header .nav-links .main .nav-tab a:hover {
+    border-bottom-color: #ec5713 !important;
+  }
+  .global-header .nav-links .main .nav-tab a:hover {
+    border-bottom-color: #ec5713 !important;
+  }
+}
+
+/**LMS NOT TEMPLAYTED**/
+.course-info header.course-profile {
+  width: 90%;
+  margin: auto !important;
+}
+.course-info
+  header.course-profile
+  .intro-inner-wrapper
+  .intro
+  .main-cta
+  strong {
+  border: none !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  background-color: #ec5713 !important;
+  background-image: none !important;
+}
+.course-info
+  header.course-profile
+  .intro-inner-wrapper
+  .intro
+  .main-cta
+  strong:hover {
+  background-color: #000 !important;
+}
+.wrapper-preview-menu {
+  background-color: #ec5713 !important;
 }

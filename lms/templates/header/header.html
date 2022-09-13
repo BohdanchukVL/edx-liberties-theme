@@ -1,6 +1,6 @@
 ## mako
 
-<%page expression_filter="h" args="online_help_token, use_cookie_banner=False"/>
+<%page expression_filter="h" args="online_help_token, use_cookie_banner=True"/>
 
 <%namespace name='static' file='../static_content.html'/>
 <%namespace file='../main.html' import="login_query"/>
@@ -42,7 +42,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   </script>
 % endif
 
-<header class="bg-black overflow-hidden border-transparent shadow-none border-opacity-0 global-header lg:mb-4 ${'slim' if course else ''}">
+<header class="bg-black overflow-hidden border-transparent shadow-none border-opacity-0 global-header ${'slim' if course else ''}">
     % if use_cookie_banner:
         ${static.renderReact(
             component="CookiePolicyBanner",

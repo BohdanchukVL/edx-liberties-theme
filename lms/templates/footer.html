@@ -1,7 +1,12 @@
 ## mako
 <%page expression_filter="h" />
-<%! from django.urls import reverse from django.utils.translation import ugettext as _ from lms.djangoapps.branding.api
-  import get_footer from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_enabled %>
+<%! 
+from django.urls import reverse 
+from django.utils.translation import ugettext as _ 
+from lms.djangoapps.branding.api import get_footer 
+from openedx.core.djangoapps.lang_pref.api 
+import footer_language_selector_is_enabled 
+%>
   <% footer=get_footer(is_secure=is_secure) %>
     <% icp_license_info=getattr(settings, 'ICP_LICENSE_INFO' , {})%>
       <%namespace name='static' file='static_content.html' />
@@ -195,7 +200,7 @@
           </div>
           <div class="mt-12 border-t border-gray-200 pt-8">
             <p class="text-base text-gray-400 xl:text-center">
-              &copy; 2020 ${platform_name}, Inc. All rights reserved.
+              &copy; 2022 ${platform_name}, Inc. All rights reserved.
             </p>
           </div>
         </div>
