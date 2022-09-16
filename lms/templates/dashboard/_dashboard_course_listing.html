@@ -112,17 +112,21 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
       % endif
     </div>
       <div class="wrapper-course-details">
-        <h3 class="course-title" id="course-title-${enrollment.course_id}">
+        <div id="course-title-${enrollment.course_id}">
           % if show_courseware_link and not is_unfulfilled_entitlement:
             % if not is_course_expired:
-              <a data-course-key="${enrollment.course_id}" href="${course_target}" class="course-target-link">${course_overview.display_name_with_default}</a>
+              <a data-course-key="${enrollment.course_id}" href="${course_target}">
+                <span class="hoverable-highlight">${course_overview.display_name_with_default}</span>
+              </a>
             % else:
-              <a class="disable-look" data-course-key="${enrollment.course_id}">${course_overview.display_name_with_default}</a>
+              <a class="disable-look" data-course-key="${enrollment.course_id}">
+                <span class="hoverable-highlight">${course_overview.display_name_with_default}</span>             
+              </a>
             % endif
           % else:
             <span>${course_overview.display_name_with_default}</span>
           % endif
-        </h3>
+        </div>
         <div class="wrapper-course-info-actions">
           <div class="wrapper-course-info-row">
             <div class="course-info">
@@ -312,7 +316,7 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
               % if (show_courseware_link or is_unfulfilled_entitlement) and not is_course_expired:
                 % if course_overview.has_ended():
                   % if not is_unfulfilled_entitlement:
-                    <a href="${course_target}" class="enter-course archived course-target-link" data-course-key="${enrollment.course_id}">${_('View Archived Course')}<span class="sr">&nbsp;${course_overview.display_name_with_default}</span></a>
+                    <a href="${course_target}" class="enter-course archived course-target-link font-roboto" data-course-key="${enrollment.course_id}">${_('View Archived Course')}<span class="sr">&nbsp;${course_overview.display_name_with_default}</span></a>
                   % endif
 
                 % else:
