@@ -25,46 +25,50 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
 <nav class="nav-links" aria-label=${_("Supplemental Links")}>
   <div class="main">
   % if mktg_site_enabled:
-    <div class="mobile-nav-item hidden-mobile nav-item">
-      <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
+    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+      <a class="tab-nav-link" href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
     </div>
     % if courses_are_browsable:
-      <div class="mobile-nav-item hidden-mobile nav-item">
-        <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a class="tab-nav-link" href="${marketing_link('COURSES')}">${_("Courses")}</a>
       </div>
     % endif
-    <div class="mobile-nav-item hidden-mobile nav-item">
-      <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
+    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+      <a class="tab-nav-link" href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
     </div>
   % endif
   % if allows_login:
     % if can_discover_courses:
-      <div class="mobile-nav-item hidden-mobile nav-item">
-        <a href="/courses">${_('Explore courses')}</a>
+      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a class="tab-nav-link" href="/courses">${_('Explore courses')}</a>
       </div>
     %endif
   % endif
   </div>
   <div class="secondary">
-    <div>
+    <div class="flex items-center">
       % if allows_login:
         % if allow_public_account_creation:
           % if should_redirect_to_authn_mfe:
-            <div class="mobile-nav-item hidden-mobile nav-item">
-                <a class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium lg:rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
+            <div class="mobile-nav-item hidden-mobile nav-item p-0">
+                <a class="donation-buttons text-base font-roboto border-none relative z-50
+                bg-black text-white rounded shadow-inner
+                ml-4 sm:ml-8 lg:ml-0 xl:ml-8 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
             </div>
           % else:
-            <div class="mobile-nav-item hidden-mobile nav-item">
-                <a class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium lg:rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="/register${login_query()}">${_("Register")}</a>
+            <div class="mobile-nav-item hidden-mobile nav-item p-0">
+                <a class="donation-buttons text-base font-roboto border-none relative z-50
+                bg-black text-white rounded shadow-inner
+                ml-4 sm:ml-8 lg:ml-0 xl:ml-8 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="/register${login_query()}">${_("Register")}</a>
             </div>
           % endif
         % endif
         % if should_redirect_to_authn_mfe:
-          <div class="mobile-nav-item hidden-mobile nav-item">
+          <div class="mobile-nav-item hidden-mobile nav-item p-0">
               <a class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium lg:rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
           </div>
         % else:
-          <div class="mobile-nav-item hidden-mobile nav-item">
+          <div class="mobile-nav-item hidden-mobile nav-item p-0">
               <a class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium lg:rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="/login${login_query()}">${_("Sign in")}</a>
           </div>
         % endif

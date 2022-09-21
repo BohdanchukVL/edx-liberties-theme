@@ -8,7 +8,7 @@
 	</div>
 <% } %>
 
-<form id="register" class="register-form shadow sm:rounded-lg py-8 px-4 sm:px-10 mt-4" autocomplete="off" tabindex="-1" method="POST">
+<form id="register" class="register-form py-8 px-4 sm:px-10 mt-4 flex md:flex-col bg-gray-100 rounded overflow-hidden sm:h-auto" autocomplete="off" tabindex="-1" method="POST">
 
     <% if (!context.currentProvider) { %>
         <% if (context.providers.length > 0 || context.hasSecondaryProviders) { %>

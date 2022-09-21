@@ -112,14 +112,14 @@ from lms.djangoapps.experiments.utils import UPSELL_TRACKING_FLAG
       % endif
     </div>
       <div class="wrapper-course-details">
-        <div id="course-title-${enrollment.course_id}">
+        <div id="course-title-${enrollment.course_id}" class="sm:mb-6 mb-4 mt-3">
           % if show_courseware_link and not is_unfulfilled_entitlement:
             % if not is_course_expired:
-              <a data-course-key="${enrollment.course_id}" href="${course_target}">
+              <a class="font-roboto font-bold text-3xl hoverable-static" data-course-key="${enrollment.course_id}" href="${course_target}">
                 <span class="hoverable-highlight">${course_overview.display_name_with_default}</span>
               </a>
             % else:
-              <a class="disable-look" data-course-key="${enrollment.course_id}">
+              <a class="font-roboto font-bold text-3xl disable-look" data-course-key="${enrollment.course_id}">
                 <span class="hoverable-highlight">${course_overview.display_name_with_default}</span>             
               </a>
             % endif

@@ -26,7 +26,7 @@ from openedx.core.djangolib.markup import HTML, Text
   }
   ```
 -->
-<div class="">
+{% comment %} <div>
     <div class="relative overflow-hidden">
       <main>
         <div class="pt-10 bg-gray-900 sm:pt-16 lg:pt-8 lg:pb-14 lg:overflow-hidden">
@@ -64,7 +64,7 @@ from openedx.core.djangolib.markup import HTML, Text
         <!-- More main page content here... -->
       </main>
     </div>
-  </div>
+  </div> {% endcomment %}
   
   
   
@@ -73,7 +73,7 @@ from openedx.core.djangolib.markup import HTML, Text
 <!-- Features -->
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="relative bg-white py-16 sm:py-16 lg:py-20">
-    <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
+    {% comment %} <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
       <h2 class="text-base font-semibold tracking-wider text-indigo-600 uppercase font-sans">Feature rich learning management system.</h2>
       <p class="mt-2 text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl">
         Build engaging and inspiring learning experiences
@@ -198,8 +198,7 @@ from openedx.core.djangolib.markup import HTML, Text
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </div> {% endcomment %}
   <!-- Bring courses list -->
   <div class="relative">
     <div class="absolute inset-0 flex items-center" aria-hidden="true">
@@ -209,6 +208,7 @@ from openedx.core.djangolib.markup import HTML, Text
     </div>
   </div>
   <%include file="${courses_list}" />
+</div>
   <!-- CTA -->
   <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="relative bg-gray-800">
@@ -244,7 +244,7 @@ from openedx.core.djangolib.markup import HTML, Text
   
   <!-- Testimonials -->
 <!-- This example requires Tailwind CSS v2.0+ -->
-<section class="bg-white overflow-hidden">
+{% comment %} <section class="bg-white overflow-hidden">
     <div class="relative max-w-7xl mx-auto pt-20 pb-12 px-4 sm:px-6 lg:px-8 lg:py-20">
       <svg class="absolute top-full left-0 transform translate-x-80 -translate-y-24 lg:hidden" width="784" height="404" fill="none" viewBox="0 0 784 404" aria-hidden="true">
         <defs>
@@ -294,5 +294,5 @@ from openedx.core.djangolib.markup import HTML, Text
         </div>
       </div>
     </div>
-  </section>
+  </section> {% endcomment %}
   
