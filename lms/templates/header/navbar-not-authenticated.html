@@ -51,25 +51,23 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
         % if allow_public_account_creation:
           % if should_redirect_to_authn_mfe:
             <div class="mobile-nav-item hidden-mobile nav-item p-0">
-                <a class="donation-buttons text-base font-roboto border-none relative z-50
-                bg-black text-white rounded shadow-inner
-                ml-4 sm:ml-8 lg:ml-0 xl:ml-8 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
+                <a class="donation-buttons text-base m-0 font-roboto border-none relative z-50
+                bg-black text-white rounded shadow-inner ml-4 sm:ml-8 lg:ml-0 xl:ml-8 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
             </div>
           % else:
             <div class="mobile-nav-item hidden-mobile nav-item p-0">
-                <a class="donation-buttons text-base font-roboto border-none relative z-50
-                bg-black text-white rounded shadow-inner
-                ml-4 sm:ml-8 lg:ml-0 xl:ml-8 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="/register${login_query()}">${_("Register")}</a>
+                <a class="donation-buttons text-base m-0 font-roboto border-none relative z-50
+                bg-black text-white rounded shadow-inner ml-4 sm:ml-8 lg:ml-0 xl:ml-8 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="/register${login_query()}">${_("Register")}</a>
             </div>
           % endif
         % endif
         % if should_redirect_to_authn_mfe:
           <div class="mobile-nav-item hidden-mobile nav-item p-0">
-              <a class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium lg:rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
+              <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
           </div>
         % else:
           <div class="mobile-nav-item hidden-mobile nav-item p-0">
-              <a class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium lg:rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="/login${login_query()}">${_("Sign in")}</a>
+              <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="/login${login_query()}">${_("Sign in")}</a>
           </div>
         % endif
       % endif

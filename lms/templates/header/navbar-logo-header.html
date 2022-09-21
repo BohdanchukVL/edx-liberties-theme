@@ -32,7 +32,7 @@ from lms.djangoapps.branding import api as branding_api
         % endif
       </a>
       % else:
-      <a class="lg:mt-8" href="${branding_api.get_home_url()}">
+      <a href="${branding_api.get_home_url()}">
         <%block name="navigation_logo">
           <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="172" height="32" viewBox="0 0 172 32" fill="none"

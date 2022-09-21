@@ -4,7 +4,7 @@
 <% if ( context.createAccountOption !== false && !context.syncLearnerProfileData && !(context.enterpriseName && context.currentProvider) ) { %>
 <div class="toggle-form">
     <span class="text"><%- gettext("First time here?") %></span>
-    <a href="#login" class="form-toggle" data-type="register"><%- gettext("Create an Account.") %></a>
+    <a href="#login" class="form-toggle link-btn--light" data-type="register"><%- gettext("Create an Account.") %></a>
 </div>
 <% } %>
 
@@ -24,7 +24,7 @@
     </p>
     <p><%- gettext("To continue learning with this account, sign in below.") %></p>
 <% } else if (!context.is_require_third_party_auth_enabled) { %>
-    <h1 class="section-title mt-6 text-center text-3xl font-extrabold text-gray-900"><%- gettext("Sign In") %></h1>
+    <h1 class="section-title mt-6 text-center text-3xl font-extrabold text-gray-900 font-roboto"><%- gettext("Sign In") %></h1>
 <% } %>
 
 <form id="login" class="login-form py-8 px-4 sm:px-10 mt-4 flex md:flex-col bg-gray-100 rounded overflow-hidden sm:h-auto" tabindex="-1" method="POST">
@@ -53,7 +53,7 @@
     <% if (!context.is_require_third_party_auth_enabled) { %>
         <%= HtmlUtils.HTML(context.fields) %>
 
-        <button type="submit" class="action action-primary action-update js-login login-button inline-flex items-center px-8 py-3 border border-transparent text-base font-bold lg:rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"><%- gettext("Sign in") %></button>
+        <button type="submit" class="action action-primary action-update js-register register-button inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center"><%- gettext("Sign in") %></button>
     <% } %>
 
     <% if ( context.providers.length > 0 && !context.currentProvider) { %>

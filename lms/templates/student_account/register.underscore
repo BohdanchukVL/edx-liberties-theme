@@ -4,7 +4,7 @@
 <% if (!context.syncLearnerProfileData) { %>
 	<div class="toggle-form">
 		<span class="text"><%- edx.StringUtils.interpolate(gettext('Already have an {platformName} account?'), {platformName: context.platformName }) %></span>
-		<a href="#login" class="form-toggle" data-type="login"><%- gettext("Sign in.") %></a>
+		<a href="#login" class="form-toggle link-btn--light" data-type="login"><%- gettext("Sign in.") %></a>
 	</div>
 <% } %>
 
@@ -15,7 +15,7 @@
             <div class="login-providers">
                 <div class="section-title lines">
                     <h3>
-                        <span class="text"><%- gettext("Create an account using") %></span>
+                        <span class="text font-roboto"><%- gettext("Create an account using") %></span>
                     </h3>
                 </div>
                 <%
@@ -42,7 +42,7 @@
             <% if (!context.is_require_third_party_auth_enabled) { %>
                 <div class="section-title lines">
                     <h3>
-                        <span class="text"><%- gettext("or create a new one here") %></span>
+                        <span class="text font-roboto"><%- gettext("or create a new one here") %></span>
                     </h3>
                 </div>
             <% } %>
