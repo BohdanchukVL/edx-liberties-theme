@@ -53,7 +53,7 @@
     <% if (!context.is_require_third_party_auth_enabled) { %>
         <%= HtmlUtils.HTML(context.fields) %>
 
-        <button type="submit" class="action action-primary action-update js-register register-button inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center"><%- gettext("Sign in") %></button>
+        <button type="submit" class="action action-primary action-update js-login register-button inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center"><%- gettext("Sign in") %></button>
     <% } %>
 
     <% if ( context.providers.length > 0 && !context.currentProvider) { %>
