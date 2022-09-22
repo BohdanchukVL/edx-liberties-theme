@@ -198,6 +198,10 @@ footer a:hover {
   .global-header .nav-links .secondary .nav-item {
     padding:0;
   }
+  .global-header .dropdown-user-menu {
+    top: 150px;
+    right: 30px;
+  }
 
   .global-header .nav-links .nav-tab a {
     padding: 7px 0 0px !important;
@@ -241,7 +245,7 @@ footer a:hover {
   .main-container
   .my-courses
   .listing-courses
-  .course-item:last-of-type {
+  .course-item {
   background-color: #fff;
 }
 .listing-courses .course-item .course-container {
@@ -292,6 +296,16 @@ footer a:hover {
   color: #000;
   line-height: 1.333333;
 }
+.course-info .details h2, .course-info .details .home>header .title>.heading-group p, .home>header .title>.heading-group .course-info .details p, .course-info .details section.outside-app h1, section.outside-app .course-info .details h1 {
+  font-family: 'Roboto Condensed';
+}
+.course-info .details p {
+  margin-bottom: 10px;
+  font-family: 'Roboto Condensed';
+}
+.course-info .course-sidebar header .social-sharing .sharing-message {
+  font-family: 'Roboto Condensed';
+}
 
 @media (min-width: 768px) {
   .section-title {
@@ -308,48 +322,44 @@ footer a:hover {
 }
 
 /**FORMS**/
-.login-register .form-field, .financial-assistance-wrapper .financial-assistance-form .form-field {
+/* .login-register .form-field, .financial-assistance-wrapper .financial-assistance-form .form-field {
   display: flex;
   align-items: center;
-}
+} */
 .login-register .form-field input, .financial-assistance-wrapper .financial-assistance-form .form-field input, .login-register .form-field select, .financial-assistance-wrapper .financial-assistance-form .form-field select, .login-register .form-field textarea, .financial-assistance-wrapper .financial-assistance-form .form-field textarea {
   height: 45px;
+  box-shadow: none;
+  outline: none;
   border: none;
   padding: 0;
   margin: 0;
+  padding-left: 15px;
 }
 .login-register .form-field label.focus-out, .financial-assistance-wrapper .financial-assistance-form .form-field label.focus-out, .login-register .form-field input.focus-out, .financial-assistance-wrapper .financial-assistance-form .form-field input.focus-out, .login-register .form-field select.focus-out, .financial-assistance-wrapper .financial-assistance-form .form-field select.focus-out, .login-register .form-field textarea.focus-out, .financial-assistance-wrapper .financial-assistance-form .form-field textarea.focus-out, .login-register .form-field .plaintext-field.focus-out, .financial-assistance-wrapper .financial-assistance-form .form-field .plaintext-field.focus-out {
-  padding: 0;
-  padding-left: 10px;
+  padding: 12px 10px;
 }
 .login-register .form-field input.checkbox + label, .financial-assistance-wrapper .financial-assistance-form .form-field input.checkbox + label, .login-register .form-field select.checkbox + label, .financial-assistance-wrapper .financial-assistance-form .form-field select.checkbox + label, .login-register .form-field textarea.checkbox + label, .financial-assistance-wrapper .financial-assistance-form .form-field textarea.checkbox + label {
   margin-left: 8px;
   margin-top: 0;
 }
+.listing-tools, .listing-tools .listing-sort-select, .verification-process .help-item .copy, .verification-process .carousel .requirements .requirement .copy, .verification-process .carousel .wrapper-task .wrapper-help .help .copy, .verification-process .carousel #wrapper-review .review-task-photos .wrapper-photos .help-tips .copy, .verification-process.step-select-track .register-choice-certificate .action-intro, .verification-process.step-select-track .help-register .copy, .u-field-message, .modal-settings-language .actions-supplemental .list-actions-item, .wrapper-messages-primary .message .message-copy, .wrapper-messages-primary .message .message-copy .copy, .wrapper-messages-primary .message.message-status .message-copy, .wrapper-messages-primary .message.message-status .certificate-explanation, .status-verification .status-data-message, .find-courses .discovery-input, .view-survey .action-cancel, .view-survey button, .view-survey input, .view-survey select, .view-survey textarea, .view-survey .bit p, .login-register .form-field .tip, .financial-assistance-wrapper .financial-assistance-form .form-field .tip, .login-register .form-field .label-optional, .financial-assistance-wrapper .financial-assistance-form .form-field .label-optional, .verification-process .wrapper-msg .msg-content .copy, .verification-process .nav-wizard .help-inline, .verification-process.step-select-track .register-choice-certificate .title-expand, .verification-process.step-review .nav-wizard .prompt-verify .copy, .verification-process.step-review .nav-wizard .prompt-verify .action-verify label, .verification-process.step-review .nav-wizard .step-match label, .verification-process .pay-and-verify .photo-tip, .verification-process .incourse-reverify .photo-tip, .verification-process .reverify .photo-tip, #expiry-msg, .shopping-cart .col-two .row-inside .billing-detail-label, .shopping-cart .col-two .row-inside .billing-detail-value, .shopping-cart .bordered-bar h2 span .blue-link, .shopping-cart .bordered-bar .home>header .title>.heading-group p span .blue-link, .home>header .title>.heading-group .shopping-cart .bordered-bar p span .blue-link, .shopping-cart .bordered-bar section.outside-app h1 span .blue-link, section.outside-app .shopping-cart .bordered-bar h1 span .blue-link, .shopping-cart table.course-receipt tr td:last-child span, .empty-cart p, .enrollment-modal-wrapper.is-shown .enrollment-modal .enrollment-change-field p, .enrollment-modal-wrapper.is-shown .enrollment-modal .enrollment-change-field label, .enrollment-modal-wrapper.is-shown .enrollment-modal .enrollment-change-field select, .enrollment-modal-wrapper.is-shown .enrollment-modal .enrollment-change-field input, .enrollment-modal-wrapper.is-shown .enrollment-modal .enrollment-change-errors, #api-access-wrapper p, #api-access-wrapper .api-form-container .api-form p .helptext, .view-profile .wrapper-profile-section-container-two .u-field.mode-placeholder .u-field-value, .view-profile .badge-set-display .badge-display .badge-details, .view-profile .badge-set-display .badge-display .badge-details .badge-date-stamp, .wrapper-msg .msg-content .copy, .wrapper-msg .msg-content .copy p, .message, .wrapper-notification .copy, .wrapper-alert .copy, .prompt .copy, .notification .copy, .alert:not(.pattern-library-shim) .action-dismiss .button-copy, .wrapper-message .message, .wrapper-message .message.information, .main-wrapper .alert {
+  font-size: 12px;
+  line-height: 20.72px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
 
 
 /**LMS NOT TEMPLAYTED**/
-.dropdown-user-menu {
-  top: 150px;
-  right: 30px;
-  z-index: 20;
+.global-header .dropdown-user-menu {
+  z-index: 20!important;
 }
 
 .course-info header.course-profile {
   width: 90%;
   margin: auto !important;
-}
-.course-info
-  header.course-profile
-  .intro-inner-wrapper
-  .intro
-  .main-cta
-  strong {
-  border: none !important;
-  border-radius: 10px !important;
-  box-shadow: none !important;
-  background-color: #ec5713 !important;
-  background-image: none !important;
+  max-width: 1620px;
 }
 .course-info
   header.course-profile
@@ -780,3 +790,6 @@ article:hover .course-title {
   box-shadow: -0.1em 0 #ec5713, 0.1em 0 #ec5713;
 }
 
+.course-info .container .wrap-instructor-info .instructor-info-action:hover, .course-info section.outside-app .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action:hover, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action:hover, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action:hover, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action:hover {
+  background-color: #73d5ff;
+}
