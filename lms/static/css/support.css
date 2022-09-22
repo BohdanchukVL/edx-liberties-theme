@@ -8,6 +8,18 @@
 .toggle-user-dropdown .fa-caret-down:before {
   color: #fff;
 }
+a:not(.btn), a:visited:not(.btn) {
+  color: inherit;
+}
+.global-header .hamburger-menu {
+  right: 20px;
+  top: 5px;
+  left: inherit;
+}
+.global-header .hamburger-menu .line {
+  height: 2px;
+  background: #ffffff;
+}
 #content,
 .find-courses,
 .university-profile {
@@ -17,16 +29,11 @@
   border-bottom: 3px solid #ec5713;
 }
 a {
-  color: inherit !important;
   text-decoration: inherit !important;
   text-decoration-line: inherit !important;
   text-decoration-thickness: inherit !important;
   text-decoration-style: inherit !important;
   text-decoration-color: inherit !important;
-}
-footer a {
-  color: #000 !important;
-  font-family: 'Roboto Condensed' !important;
 }
 footer a:hover {
   text-decoration: underline;
@@ -711,6 +718,7 @@ article:hover .course-title {
 .donation-buttons {
   text-transform: uppercase;
   font-weight: 700!important;
+  transition: .25s;
 }
 .shadow-inner {
   --tw-shadow: inset 0px 0px 0px 1px #ec5713;
@@ -792,4 +800,89 @@ article:hover .course-title {
 
 .course-info .container .wrap-instructor-info .instructor-info-action:hover, .course-info section.outside-app .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action:hover, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action:hover, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action:hover, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action:hover {
   background-color: #73d5ff;
+}
+
+/**CONTAINER**/
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  } 
+}
+
+/**LIBERTIES FOOTER**/
+.footer-contacts {
+  padding-top: 3rem;
+  align-items: flex-start;
+}
+.footer-label {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  --tw-text-opacity: 0.7;
+  font-style: normal;
+}
+.footer-label.-terms {
+  font-family: 'Roboto Condensed';
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  --tw-text-opacity: 1;
+  --tw-text-opacity: 0.8;
+  text-transform: uppercase;
+}
+.footer-label, .footer-label.-terms {
+  color: rgba(255,255,255,var(--tw-text-opacity));
+}
+@media (min-width: 768px) {
+  .footer-contacts {
+    padding-bottom: 2.5rem;
+    padding-top: 6rem;
+    display: flex;
+    justify-content: space-between;
+  }
+} 
+@media (min-width: 640px) {
+  .footer-contacts {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .global-header .header-logo a {
+    margin: 0px 0 0 40px;
+  }
 }

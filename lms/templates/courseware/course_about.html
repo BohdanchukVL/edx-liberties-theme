@@ -77,14 +77,14 @@ from six import string_types
           %if user.is_authenticated and registered:
             %if show_courseware_link:
               <a href="${course_target}">
-                <div class="flex -mx-2">
+                <div class="flex-col sm:flex-row flex -mx-2">
                   %endif
-                  <div class="w-1/2 px-2">
+                  <div class="w-100 sm:w-1/2 px-2">
                     <span class="register disabled rounded w-100 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5">${_("You are enrolled in this course")}</span>
                   </div>
                   %if show_courseware_link:
-                  <div class="w-1/2 px-2">
-                    <div class="w-100 inline-flex justify-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5">${_("View Course")}</div>
+                  <div class="w-100 sm:w-1/2 mt-2 sm:mt-0  px-2">
+                    <div class="w-100 inline-flex justify-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded py-2 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5">${_("View Course")}</div>
                   </div>
                 </div>
               </a>
