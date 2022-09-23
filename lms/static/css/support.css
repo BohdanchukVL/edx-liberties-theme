@@ -862,6 +862,14 @@ article:hover .course-title {
   background-color: #ec5713;
   box-shadow: -0.1em 0 #ec5713, 0.1em 0 #ec5713;
 }
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+.latest-story-image>img {
+  border-radius: 0.125rem;
+  width: 100%;
+}
 
 .course-info .container .wrap-instructor-info .instructor-info-action:hover, .course-info section.outside-app .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .profile-self .wrapper-profile-field-account-privacy .u-field-account_privacy .wrap-instructor-info .instructor-info-action:hover, .view-profile .profile-self .wrapper-profile-field-account-privacy .course-info .u-field-account_privacy .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .wrapper-profile-sections .wrap-instructor-info .instructor-info-action:hover, .view-profile .course-info .wrapper-profile-sections .wrap-instructor-info .instructor-info-action:hover, .course-info .view-profile .badge-set-display .wrap-instructor-info .instructor-info-action:hover, .view-profile .course-info .badge-set-display .wrap-instructor-info .instructor-info-action:hover {
   background-color: #73d5ff;
@@ -966,6 +974,7 @@ article:hover .course-title {
 }
 h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5, h6 {
   font-family: 'Roboto Condensed';
+  text-align: inherit;
 }
 /**COOKIE MODAL**/
 #manage-cookies {
