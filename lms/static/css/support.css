@@ -8,8 +8,11 @@
 .toggle-user-dropdown .fa-caret-down:before {
   color: #fff;
 }
-a:not(.btn), a:visited:not(.btn) {
+a:not(.btn), a:visited {
   color: inherit;
+}
+a:not(.btn), a:visited:not(.btn) {
+  color: rgba(255,255,255,var(--tw-text-opacity));
 }
 .global-header .hamburger-menu {
   right: 20px;
@@ -303,6 +306,27 @@ footer a:hover {
   color: #000;
   line-height: 1.333333;
 }
+.content p, .content li {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.content h1, .content h2, .content h3, .content h4 {
+  font-weight: 700;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.content h1 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.content h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+.content h4 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
 .course-info .details h2, .course-info .details .home>header .title>.heading-group p, .home>header .title>.heading-group .course-info .details p, .course-info .details section.outside-app h1, section.outside-app .course-info .details h1 {
   font-family: 'Roboto Condensed';
 }
@@ -319,12 +343,41 @@ footer a:hover {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+  .content p, .content li {
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
+  .content h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    
+  }
+  .content h3 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .content h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .section-title {
     font-size: 3rem;
     line-height: 1;
+  }
+  .content h1 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .content h3 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .content h4 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 
@@ -885,4 +938,52 @@ article:hover .course-title {
   .global-header .header-logo a {
     margin: 0px 0 0 40px;
   }
+}
+h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed';
+}
+/**COOKIE MODAL**/
+#manage-cookies {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 999;
+  transition: opacity 200ms;
+}
+#manage-cookies:target {
+  pointer-events: all;
+  opacity: 1;
+}
+#manage-cookies #target-inner {
+  position: absolute;
+  display: block;
+  line-height: 1.8;
+  top: 50%;
+  left: 50%;
+  max-height: 70vh;
+  overflow: auto;
+  transform: translateX(-50%) translateY(-50%);
+}
+#manage-cookies button {
+  background-image: none;
+  box-shadow: none;
+  padding: 0;
+}
+#manage-cookies a.close {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #34495E;
+  opacity: 0.5;
+  transition: opacity 200ms;
+}
+#manage-cookies a.close:hover {
+  opacity: 0.4;
 }
