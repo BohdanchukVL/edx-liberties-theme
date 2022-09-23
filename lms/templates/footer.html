@@ -19,9 +19,9 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
           <h3 class="flex-auto uppercase font-bold">Necessary</h3>
           <button
             type="button"
-            class="text-sm text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
+            class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
           >
-            <span class="hoverable-highlight">details</span>
+            <span class="hoverable-highlight link-btn--light">details</span>
           </button>
           <div>
             <div
@@ -40,9 +40,9 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
           <h3 class="flex-auto uppercase font-bold">Preferences</h3>
           <button
             type="button"
-            class="text-sm text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
+            class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
           >
-            <span class="hoverable-highlight">details</span>
+            <span class="hoverable-highlight link-btn--light">details</span>
           </button>
           <label>
             <input type="checkbox" class="hidden cookie-toggle-input" />
@@ -59,28 +59,9 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
           <h3 class="flex-auto uppercase font-bold">Performance</h3>
           <button
             type="button"
-            class="text-sm text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
+            class="text-sm text-black bg-transparent capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
           >
-            <span class="hoverable-highlight">details</span>
-          </button>
-          <label>
-            <input type="checkbox" class="hidden cookie-toggle-input" />
-            <div
-              class="cookie-toggle flex content-start rounded-full bg-gray-300 p-1 w-10"
-            >
-              <div
-                class="dot bg-white w-4 h-4 rounded-full cookie-toggle-dot"
-              ></div>
-            </div>
-          </label>
-        </div>
-        <div class="flex space-x-6 items-center">
-          <h3 class="flex-auto uppercase font-bold">Functional Preferences</h3>
-          <button
-            type="button"
-            class="text-sm text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
-          >
-            <span class="hoverable-highlight">details</span>
+            <span class="hoverable-highlight link-btn--light">details</span>
           </button>
           <label>
             <input type="checkbox" class="hidden cookie-toggle-input" />
@@ -94,9 +75,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
           </label>
         </div>
       </div>
-      <div
-        class="my-6 py-4 border-0 border-t border-b border-solid border-black"
-      >
+      <div class="my-6 border-0 border-t border-b border-solid border-black">
         <div>
           <h3 class="font-bold">Details of Necessary cookies</h3>
           <div class="my-2">
@@ -116,13 +95,13 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
                   <div class="text-xs text-black text-opacity-40">
                     Cookie Name
                   </div>
-                  session
+                  name
                 </div>
                 <div>
                   <div class="text-xs text-black text-opacity-40">
                     Provider Name
                   </div>
-                  Liberties.EU
+                  prodvider.name
                 </div>
                 <div>
                   <div class="text-xs text-black text-opacity-40">Expiry</div>
@@ -138,108 +117,15 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
                   Provider Domain
                 </div>
                 <div class="text-sm text-black text-opacity-80">
-                  cookies.details_table_domain_use_session
-                </div>
-              </div>
-            </div>
-            <div class="py-4">
-              <div class="grid grid-cols-3 gap-2">
-                <div>
-                  <div class="text-xs text-black text-opacity-40">
-                    Cookie Name
-                  </div>
-                  already_redirected
-                </div>
-                <div>
-                  <div class="text-xs text-black text-opacity-40">
-                    Provider Name
-                  </div>
-                  Liberties.EU
-                </div>
-                <div>
-                  <div class="text-xs text-black text-opacity-40">Expiry</div>
-                </div>
-              </div>
-              <div class="text-xs text-black text-opacity-40 mt-2">Purpose</div>
-              <div class="text-sm text-black text-opacity-80">
-                This makes sure the user doesn’t see a campaign overlay twice
-                and gets redirected only once.
-              </div>
-              <div>
-                <div class="text-xs text-black text-opacity-40 mt-2">
-                  Provider Domain
-                </div>
-                <div class="text-sm text-black text-opacity-80">
-                  www.liberties.eu
-                </div>
-              </div>
-            </div>
-            <div class="py-4">
-              <div class="grid grid-cols-3 gap-2">
-                <div>
-                  <div class="text-xs text-black text-opacity-40">
-                    Cookie Name
-                  </div>
-                  cookies_settings
-                </div>
-                <div>
-                  <div class="text-xs text-black text-opacity-40">
-                    Provider Name
-                  </div>
-                  Liberties.EU
-                </div>
-                <div>
-                  <div class="text-xs text-black text-opacity-40">Expiry</div>
-                  2037/01/01
-                </div>
-              </div>
-              <div class="text-xs text-black text-opacity-40 mt-2">Purpose</div>
-              <div class="text-sm text-black text-opacity-80">
-                This makes sure the user doesn’t see the cookie banner twice.
-              </div>
-              <div>
-                <div class="text-xs text-black text-opacity-40 mt-2">
-                  Provider Domain
-                </div>
-                <div class="text-sm text-black text-opacity-80">
-                  cookies.details_table_domain_use_cookies_consent
-                </div>
-              </div>
-            </div>
-            <div class="py-4">
-              <div class="grid grid-cols-3 gap-2">
-                <div>
-                  <div class="text-xs text-black text-opacity-40">
-                    Cookie Name
-                  </div>
-                  newsletter_popup
-                </div>
-                <div>
-                  <div class="text-xs text-black text-opacity-40">
-                    Provider Name
-                  </div>
-                  Liberties.EU
-                </div>
-                <div>
-                  <div class="text-xs text-black text-opacity-40">Expiry</div>
-                  2037/01/01
-                </div>
-              </div>
-              <div class="text-xs text-black text-opacity-40 mt-2">Purpose</div>
-              <div class="text-sm text-black text-opacity-80">
-                cookies.details_table_purpose_cookies_newsletter_popup
-              </div>
-              <div>
-                <div class="text-xs text-black text-opacity-40 mt-2">
-                  Provider Domain
-                </div>
-                <div class="text-sm text-black text-opacity-80">
-                  cookies.details_table_domain_use_cookies_newsletter_popup
+                  cookies.domain
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      <div class="text-center">
+        <a href="#" class="inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center bg-orange donation-buttons">OK</a>
       </div>
     </div>
   </div>

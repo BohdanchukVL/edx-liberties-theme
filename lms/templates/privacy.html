@@ -5,40 +5,1423 @@
 from django.utils.translation import ugettext as _
 from django.urls import reverse
 
-from openedx.core.djangolib.markup import HTML, Text
-%>
-
-
-<div class="relative bg-gray-50 pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8">
+<div class="relative pt-8 pb-20 px-4 sm:px-6 lg:pt-8 lg:pb-28 lg:px-8">
   <div class="relative max-w-7xl mx-auto">
-    <div class="text-center">
-      <h1 class="section-title">
-        Privacy <span class="highlight-orange">Policy</span>
-      </h1>
-      <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4 font-sans">
-        Privacy policy description
-    </div>
-
-    <div class="mt-12 max-w-lg mx-auto">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
+    <div class="container">
+      <div class="content">
+        <h1>
+          Privacy policy
+          <a href="https://www.liberties.eu" target="_blank"
+            >www.liberties.eu</a
+          ><br />
+        </h1>
+        <h2>(Obligation to inform according to GDPR)</h2>
+        <h2>Table of Contents</h2>
+        <h4><a href="#C1">I. Name and address of the controller </a></h4>
+        <h4><a href="#C2">II. General information on data processing</a></h4>
+        <p>1. Scope of the processing of personal data</p>
+        <p>2. Legal basis for the processing of personal data</p>
+        <p>3. Data deletion and storage period</p>
+        <h4>
+          <a href="#C3"
+            >III. Provision of the website, provision of information via RSS
+            feed and creation of log files</a
+          >
+        </h4>
+        <p>1. Description and scope of data processing</p>
+        <p>2. Legal basis for data processing</p>
+        <p>3. Purpose of data processing</p>
+        <p>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </p>
+        <p>5. Duration of data storage</p>
+        <p>6. Objection and removal possibility</p>
+        <h4><a href="#C4">IV. Use of cookies</a></h4>
+        <p>
+          1. Description and scope of data processing / Purpose of data
+          processing / Legal basis of such processing
+        </p>
+        <p>
+          2. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </p>
+        <p>3. Duration of storage, possibility of objection and removal</p>
+        <h4><a href="#C5">V. Newsletter distribution via Mailchimp</a></h4>
+        <p>1. Description and scope of data processing</p>
+        <p>2. Legal basis for data processing</p>
+        <p>3. Purpose of data processing</p>
+        <p>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </p>
+        <p>5. Storage duration</p>
+        <p>6. Objection and removal possibility</p>
+        <h4><a href="#C6">VI. Campaign tool</a></h4>
+        <p>1. Description and scope of data processing</p>
+        <p>2. Legal basis for data processing</p>
+        <p>3. Purpose of data processing</p>
+        <p>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </p>
+        <p>5. Storage duration</p>
+        <p>6. Objection and removal possibility</p>
+        <h4><a href="#C7">VII. Donation tool</a></h4>
+        <p>1. Description and scope of data processing</p>
+        <p>2. Legal basis for data processing</p>
+        <p>3. Purpose of data processing</p>
+        <p>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </p>
+        <p>5. Storage duration</p>
+        <p>6. Objection and removal possibility</p>
+        <h4><a href="#C8">VIII. E-mail contact, postal mail</a></h4>
+        <p>1. Description and scope of data processing</p>
+        <p>2. Legal basis for data processing</p>
+        <p>3. Purpose of data processing</p>
+        <p>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </p>
+        <p>5. Storage duration</p>
+        <p>6. Objection and removal possibility</p>
+        <h4><a href="#C9">IX. Applications</a></h4>
+        <p>1. Purpose of data processing</p>
+        <p>2. Legal basis for data processing</p>
+        <p>3. Description of the categories of personal data</p>
+        <p>
+          4. Categories of recipients to whom the personal data have been or
+          will be disclosed
+        </p>
+        <p>5. Storage duration</p>
+        <p>6. Necessity of providing the data</p>
+        <h4><a href="#C10">X. Embedded service providers</a></h4>
+        <h4><a href="#C11">XI. Social media links</a></h4>
+        <h4><a href="#C12">XII. Web analytics tool</a></h4>
+        <p>1. Description and scope of data processing</p>
+        <p>2. Legal basis for data processing</p>
+        <p>3. Purpose of data processing</p>
+        <p>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </p>
+        <p>5. Storage duration</p>
+        <p>6. Objection and removal possibility</p>
+        <h4><a href="#C13">XIII. Rights of the data subject</a></h4>
+        <p>1. Right to information</p>
+        <p>2. Right to rectification</p>
+        <p>3. Right to restriction of processing</p>
+        <p>4. Right to erasure</p>
+        <p>5. Notification obligation</p>
+        <p>6. Right to data portability</p>
+        <p>7. Right to object</p>
+        <p>
+          8. Right to revoke the declaration of consent under data protection
+          law
+        </p>
+        <p>9. Right of appeal to a supervisory authority</p>
+        <hr />
+        <h1 id="C1">I. Name and address of the controller</h1>
+        <p>
+          The controller, according to the General Data Protection Regulation
+          and other national data protection laws of the member states as well
+          as other provisions of data protection law, is:
+        </p>
+        <p>
+          Civil Liberties Union for Europe e.V. (hereinafter referred to as
+          Liberties)
+        </p>
+        <p>Ringbahnstrasse 16-18-20. 3rd floor12099 Berlin, Germany</p>
+        <p>
+          Represented by Balázs Dénes<br />
+          Phone: +49 (0) 30 89 63 69 25<br />
+          E-mail: info(at) liberties . eu<br />
+          Internet address:
+          <a href="https://www.liberties.eu">www.liberties.eu</a><br />
+        </p>
+        <h1 id="C2">II. General information on data processing</h1>
+        <h2>1. Scope of the processing of personal data</h2>
+        <p>
+          We normally only process the personal data of our users to the
+          extent necessary to ensure the operation of our website, our content
+          and our services. The processing of personal data of our users takes
+          place regularly after consent of the user or due to our legitimate
+          interests. An exception applies in those cases in which it is not
+          possible to obtain prior consent for practical reasons and where the
+          processing of the data is permitted by applicable law.
+        </p>
+        <h2>2. Legal basis for the processing of personal data</h2>
+        <p>
+          Where we obtain the consent of the data subject for the processing
+          of personal data, the legal basis shall be Article 6(1)(a) of the EU
+          General Data Protection Regulation (GDPR).
+        </p>
+        <p>
+          Article 6(1)(b) GDPR serves as the legal basis for the processing of
+          personal data required for the fulfilment of a contract to which the
+          data subject is a party. This also applies to any processing
+          operations that are necessary to carry out pre-contractual measures.
+        </p>
+        <p>
+          Insofar as the processing of personal data is necessary to fulfil a
+          legal obligation to which our organisation is subject, Article
+          6(1)(c) GDPR shall serve as the legal basis.
+        </p>
+        <p>
+          If the processing is necessary to safeguard a legitimate interest of
+          our organisation or a third party and if the interests, fundamental
+          rights and fundamental freedoms of the data subject do not outweigh
+          the first interest, Article 6(1)(f) GDPR shall serve as the legal
+          basis for this processing.<br />
+        </p>
+        <h2>3. Data deletion and storage period</h2>
+        <p>
+          The personal data of the person concerned will be deleted or blocked
+          as soon as the purpose of storage does not apply any more. In
+          addition, the data may be stored if the European or national
+          legislator has provided for this in EU regulations, laws or other
+          provisions to which the controller is subject.
+        </p>
+        <p>
+          The data shall also be blocked or deleted if a storage period
+          prescribed by the aforementioned standards expires, unless it is
+          necessary to further store the data in order to conclude or fulfil a
+          contract
+        </p>
+        <h1 id="C3">
+          III. Provision of the website, provision of information via RSS feed
+          and creation of log files
+        </h1>
+        <h2>1. Description and scope of data processing</h2>
+        <p>
+          Each time a user accesses our website, our system automatically
+          collects data and information from the system of the accessing
+          computer.
+        </p>
+        <p>The following data is collected:</p>
+        <ul>
+          <li>IP address</li>
+          <li>Date and time of the request</li>
+          <li>Time zone difference to GMT</li>
+          <li>Content of the website</li>
+          <li>Access status (HTTP status)</li>
+          <li>Transferred data volume</li>
+          <li>Website from which you came to our website</li>
+          <li>Web browser</li>
+          <li>Operating system</li>
+          <li>Browser language and version</li>
+        </ul>
+        <p>
+          This happens both when you access our website directly and when you
+          view our website content via an RSS feed.
+        </p>
+        <p>The data is also stored in the log files of our system.</p>
+        <p>
+          This data is not stored in conjunction with other personal data of
+          the user.<br />
+        </p>
+        <h2>2. Legal basis for data processing</h2>
+        <p>
+          The legal basis for the temporary storage of data and log files is
+          Article 6(1)(f) GDPR. The provision of personal data is partly in
+          our legitimate interest and partly legally required (see point 5,
+          paragraph Provider). It is not possible not to provide the data.
+          Your only form of objection is by not visiting our website.
+        </p>
+        <h2>3. Purpose of data processing</h2>
+        <p>
+          In order to enable delivery of the website to the user's computer,
+          the system needs to temporarily store the IP address. For this
+          purpose, the IP address of the user must remain stored for the
+          duration of the session.
+        </p>
+        <p>
+          The same applies to the provision of website content via RSS feed.
+        </p>
+        <p>
+          Data is stored in log files in order to ensure the functionality of
+          the website. The data is also used for optimising the website and to
+          ensure the security of our IT systems.
+        </p>
+        <p>
+          We also use the log files on a daily basis to determine the total
+          number of clearly identified visitors to our website. It is not
+          possible to deduce information about individual visitors from this.
+          We determine the total number of website visitors in order to
+          compare it to the number of visitors who have agreed to our tracking
+          of their visit.
+        </p>
+        <p>
+          No further evaluation of the data for marketing purposes is carried
+          out in this context.
+        </p>
+        <p>
+          These purposes also include our legitimate interest in data
+          processing according to Article 6(1)(f) GDPR.
+        </p>
+        <h2>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </h2>
+        <p>
+          As a rule, we do not pass on personal data to third parties unless
+          we are obliged to do so by law or have obtained permission to do so.
+        </p>
+        <p>
+          Excluded from this is the involvement of service providers, e.g. for
+          hosting the website, whom we have carefully selected with regard to
+          data protection and for whom we have taken all measures required
+          under data protection laws for legitimate data processing.
+        </p>
+        <p>
+          We use hosting services from hosting providers with whom we have a
+          data processing agreement. The services we use are: Heroku, AWS.
+        </p>
+        <p>
+          <strong><i>Heroku</i></strong>
+        </p>
+        <p>
+          We use Heroku as our hosting server (website:
+          <a href="https://www.heroku.com/">https://www.heroku.com</a>).
+          Heroku, Inc. (650 7th St, San Francisco, CA 94103) is a subsidiary
+          of Salesforce.com, Inc. or one of its affiliates (Salesforce Tower,
+          415 Mission Street, 3rd Floor, San Francisco, CA 94105, United
+          States).
+        </p>
+        <p>
+          Salesforce.com, Inc. is certified under the Privacy Shield
+          Agreement, which guarantees its compliance with European privacy
+          laws (<a
+            href="https://www.privacyshield.gov/participant?id=a2zt0000000KzLyAAK"
+            >https://www.privacyshield.gov/participant?id=a2zt0000000KzLyAAK</a
+          >).
+        </p>
+        <p>
+          Heroku's privacy policy is available at: <br /><a
+            href="https://www.salesforce.com/company/privacy/"
+            >https://www.salesforce.com/company/privacy/</a
+          >
+        </p>
+        <p>
+          <strong><i>AWS</i></strong>
+        </p>
+        <p>
+          The Content Delivery Network we are using is CloudFront by Amazon
+          Web Services (AWS, Website:
+          <a href="https://aws.amazon.com/">https://aws.amazon.com/</a>). We
+          use Amazon Cloudfront in order to increase the reliability of our
+          online services, provide greater protection against data loss and
+          improve the loading speed of this website.
+        </p>
+        <p>
+          Amazon Web Services Inc. (410 Terry Avenue North, Seattle, WA
+          98109-5210) is a subsidiary of Amazon.com, Inc. (410 Terry Avenue
+          North Seattle, WA).
+        </p>
+        <p>
+          Amazon Web Services Inc. is certified under the Privacy Shield
+          Agreement and thereby offers a guarantee of compliance with European
+          data protection law. (<a
+            href="https://www.privacyshield.gov/participant?id=a2zt0000000TOWQAA4"
+            >https://www.privacyshield.gov/participant?id=a2zt0000000TOWQAA4</a
+          >).
+        </p>
+        <p>
+          You can download the privacy policy of AWS here: <br /><a
+            href="https://aws.amazon.com/de/privacy/"
+            >https://aws.amazon.com/de/privacy/</a
+          >.
+        </p>
+        <p>
+          Due to the integration of active content from service providers such
+          as Facebook and YouTube, your data (specifically your IP address)
+          will also be transferred to third countries when this content is
+          accessed. More details on this can be found below in the notes on
+          the individual providers,
+          <a href="#C10">X – Embedded service providers.</a>
+        </p>
+        <h2>5. Duration of data storage</h2>
+        <p>
+          The data will be erased as soon as it is no longer needed for
+          achieving the purpose for which it was collected. If the data has
+          been collected in order to provide the website, this will be the
+          case once the session has ended. The same applies to access via the
+          RSS feed.
+        </p>
+        <p>
+          If the data is stored in log files, the provider will anonymise the
+          data after seven days.
+        </p>
+        <p>
+          According to § 113 b TKG (Telecommunications Act), only the
+          (telecommunications-) provider is obliged to store the Internet
+          protocol address assigned to the subscriber (a unique identifier
+          used for the Internet connection) as well as an assigned user
+          identifier and date and time of the beginning and end of Internet
+          use under the assigned Internet protocol address, stating the
+          underlying time zone, for a period of ten weeks.
+        </p>
+        <p>
+          Longer storage times may be possible in connection with the
+          prosecution of administrative criminal offences.
+        </p>
+        <h2>6. Objection and removal possibility</h2>
+        <p>
+          The collection of data for the provision of the website as well as
+          the storage of data in log files are essential for the operation of
+          the website. Consequently, there is no possibility for the user to
+          object, except for the aforementioned non-usage of our website.
+        </p>
+        <h1 id="C4">IV. Use of cookies</h1>
+        <h2>
+          1. Description and scope of data processing / Purpose of data
+          processing / Legal basis of such processing
+        </h2>
+        <p>
+          Our website uses cookies. Cookies are small data packages that can
+          be stored on the hard drive of your computer when visiting websites.
+          These cookies usually contain a characteristic string of characters
+          that uniquely identifies the browser software when you return to the
+          site or continue to the next page of the site.
+        </p>
+        <p>
+          We use cookies to make our website more user-friendly. Some elements
+          of our website require that the accessing web browser can be
+          identified even after a new page has been opened.
+        </p>
+        <p>The following data is stored in the cookies we use:</p>
+        <p>
+          - Storage of the value of whether basic cookies and session cookies
+          are accepted for more convenient navigation ("Necessary") (Legal
+          basis: legitimate interest according to Article 6(1)(f) GDPR.)
+        </p>
+        <p>- Statistics cookies ("Performance")</p>
+        <p>
+          Statistics cookies allow Liberties to track visitor interaction with
+          the site in order to measure and improve site performance. (Legal
+          basis: legitimate interest according to Article 6(1)(f).)
+        </p>
+        <p>- Donation status and language preferences ("Preferences")</p>
+        <p>
+          When you decide to donate, the website accompanies you through the
+          donation process. This is required for the donation process to work.
+          Other cookies are used to match the language preference of the user.
+          (The legal basis for donation cookies is the conclusion of a
+          contract according to Article 6(1)(b) GDPR. For language preference
+          cookies it is consent according to Article 6 (1)(a) GDPR.)
+        </p>
+        <p>
+          - Storage of the value of whether third-party cookies are accepted
+          ("Functional Preferences")
+        </p>
+        <p>
+          Only after third-party cookies have been accepted, content from
+          third-party providers such as YouTube videos will be actively
+          integrated into the site (Legal basis: consent pursuant to Article
+          6(1)(a) GDPR).) See also further below for information on the
+          respective providers,
+          <a href="#C10">X – Embeded Service Providers</a>.
+        </p>
+        <p>
+          Upon accessing our website, users are informed by an information
+          banner about the use of cookies and, if necessary, their consent is
+          requested. We also refer you to this data protection declaration. In
+          this context, we are also informing users on how to disable the
+          storage of cookies in their browser settings.
+        </p>
+        <p>
+          In any current browser it is possible to delete individual or all
+          cookies or alternatively to allow or prohibit the placement of
+          cookies on a case-by-case basis. Please refer to the help pages of
+          your respective browser for information on the corresponding
+          options.
+        </p>
+        <h2>
+          2. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </h2>
+        <p>
+          As a matter of principle, we do not pass on personal data to third
+          parties unless we are obliged to do so by law or unless we have
+          obtained permission to do so.
+        </p>
+        <p>
+          Excluded from this is the integration of the service providers that
+          make the hosting of the website and the hosting of the Web Analytics
+          Tool possible (see under<a href="#C3"
+            >III – Provision of the website</a
+          >
+          und <a href="#C13">XIII - Web-Analytics Tool</a>). We do not carry
+          out any further processing within the framework of the provision of
+          our website outside of the European Union (with the exception of the
+          integrated service providers, see under
+          <a href="#C10">X – Embeded Service Providers</a>).
+        </p>
+        <h2>3. Duration of storage, possibility of objection and removal</h2>
+        <p>
+          Cookies are stored on the user's computer and transmitted to our
+          site by the user, therefore, you (the user) have complete control
+          over their useage. You can deactivate or restrict the transmission
+          of cookies by changing the settings of your Internet browser.
+          Cookies that have already been saved can be deleted at any time.
+          This can also be done automatically, for example every time you
+          close your browser. However, if cookies are deactivated for our
+          website, your preferences for our website will also be deleted (e.g.
+          information as to whether you have consented to the use of
+          third-party cookies).
+        </p>
+        <h1 id="C5">V. Newsletter distribution via Mailchimp</h1>
+        <h2>1. Description and scope of data processing</h2>
+        <p>
+          We are sending out newsletters to our newsletter subscribers on a
+          regular basis.
+        </p>
+        <p>
+          As part of the organisation of the newsletter distribution, the
+          following data of our newsletter subscribers is processed:
+        </p>
+        <p>
+          When setting up the newsletter subscription, we ask for the first
+          name and surname (for personal contact) as well as the e-mail
+          address of the person subscribing. The subscriber’s country of
+          origin is also requested so that we can send out the newsletter in
+          the appropriate national language (not all newsletter contents are
+          always sent out in the national language).
+        </p>
+        <h2>2. Legal basis for data processing</h2>
+        <p>
+          Legal basis for the processing of your personal data in connection
+          with the newsletter dispatch is Article 6(1)(a) GDPR in conjunction
+          with your specific consent to receive the newsletter. You can revoke
+          this consent to receive the newsletter at any time with effect for
+          the future. For this purpose, it is sufficient to use the
+          unsubscribe option at the end of each newsletter. Please note that
+          the lawfulness of the processing of your data up to the time of
+          revocation remains unaffected by the revocation.
+        </p>
+        <h2>3. Purpose of data processing</h2>
+        <p>
+          We use our newsletter service provider to deliver our newsletter to
+          the subscribers of our newsletter.
+        </p>
+        <h2>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </h2>
+        <p>
+          The service provider we use for sending our newsletter is Mailchimp.
+          Since the company operating Mailchimp and its IT infrastructure are
+          located in the United States, data is transferred to third parties
+          in a non-secure third country. Therefore, additional security is
+          required when data is transferred to Mailchimp. In the case of
+          Mailchimp this is achieved by the so-called "Privacy Shield".
+        </p>
+        <p>
+          The Rocket Science Group LLC, which operates Mailchimp, is certified
+          in accordance with the requirements of the Privacy Shield. (<a
+            href="https://www.privacyshield.gov/participant?id=a2zt0000000TO6hAAG"
+            >https://www.privacyshield.gov/participant?id=a2zt0000000TO6hAAG</a
+          >). This means that the prerequisites for Mailchimp to process the
+          personal data of our newsletter subscribers in accordance with data
+          protection laws are met.
+        </p>
+        <p>
+          Here (<a href="https://mailchimp.com/legal/"
+            >https://mailchimp.com/legal/</a
+          >) you will find all legal information (such as general and special
+          terms and conditions provided by Mailchimp), here (<a
+            href="https://mailchimp.com/legal/privacy/"
+            >https://mailchimp.com/legal/privacy/</a
+          >) you can find concrete information on their data protection
+          information.
+        </p>
+        <h2>5. Storage duration</h2>
+        <p>
+          Your data will remain stored in our newsletter database for as long
+          as you wish to receive our newsletter. If you revoke your consent
+          the newsletter dispatch will be stopped and afterwards your data
+          will be deleted from our newsletter mailing list.
+        </p>
+        <h2>6. Objection and removal possibility</h2>
+        <p>
+          You can revoke your consent to receive the newsletter at any time
+          with effect for the future. To do this, you only need to use the
+          unsubscribe option at the end of the respective newsletter. Please
+          note that the lawfulness of the processing of your data up to the
+          time of revocation remains unaffected by the revocation.
+        </p>
+        <h1 id="C6">VI. Campaign tool</h1>
+        <h2>1. Description and scope of data processing</h2>
+        <p>
+          We carry out campaigns on a regular basis. On our websites we offer
+          the opportunity to participate in our campaigns to those who are
+          interested.
+        </p>
+        <p>
+          As part of the organisation of campaign participation, the following
+          data on the participants in our campaigns is processed:
+        </p>
+        <p>
+          When you join the campaign, we ask for your name (for personal
+          contact), e-mail address and country. In some cases we offer the
+          possibility to subscribe to a Campaign Info Mail. The country of
+          origin of the subscriber is requested so that the Campaign Info Mail
+          can be sent in the appropriate national language if necessary (not
+          all Campaign Info Mail content is always sent in the national
+          language).
+        </p>
+        <h2>2. Legal basis for data processing</h2>
+        <p>
+          The legal basis for the processing of your personal data in the
+          context of the campaign tool is Article 6(1)(a) GDPR in conjunction
+          with your specific consent to participate in the respective
+          campaign. You may revoke your consent to participate in the campaign
+          at any time with effect for the future. For this purpose, all you
+          need to do is to make use of the unsubscribe option at the end of
+          the respective campaign info mail. Please note that the lawfulness
+          of the processing of your data up to the time of revocation remains
+          unaffected by the revocation.
+        </p>
+        <h2>3. Purpose of data processing</h2>
+        <p>
+          Using the campaign tool (petition tool, e-mail campaign tool,
+          campaign infomail) we enable interested parties to participate in
+          our campaigns and, upon request, we use infomails to keep campaign
+          participants informed about current developments regarding the
+          respective campaign.
+        </p>
+        <h2>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </h2>
+        <p>
+          The service provider we use for sending our Campaign Infomails is
+          Mailchimp. Since the company operating Mailchimp and its IT
+          infrastructure are located in the United States, data is transferred
+          to third parties in a non-secure third country. Therefore,
+          additional security is required when data is transferred to
+          Mailchimp. In the case of Mailchimp, this is achieved by the
+          so-called Privacy Shield.
+        </p>
+        <p>
+          The Rocket Science Group LLC, which operates Mailchimp, is certified
+          in accordance with the requirements of the Privacy Shield (<a
+            href="https://www.privacyshield.gov/participant?id=a2zt0000000TO6hAAG"
+            >https://www.privacyshield.gov/participant?id=a2zt0000000TO6hAAG</a
+          >). This means that the prerequisites for Mailchimp to process the
+          personal data of our campaign newsletter subscribers in accordance
+          with data protection laws are met.
+        </p>
+        <p>
+          Here (<a href="https://mailchimp.com/legal/"
+            >https://mailchimp.com/legal/</a
+          >) you will find all legal information (such as general and special
+          terms and conditions provided by Mailchimp), here (<a
+            href="https://mailchimp.com/legal/privacy/"
+            >https://mailchimp.com/legal/privacy/</a
+          >) you can find concrete information on their data protection
+          information.
+        </p>
+        <h2>5. Storage duration</h2>
+        <p>
+          Your data will remain stored in our Infomail database for as long as
+          you wish to participate in the respective campaign. If you revoke
+          your consent, the campaign infomail will no longer be sent to you
+          and your data will be deleted from our database. If you are only
+          participating but have not subscribed to the campaign info mail,
+          your data will be deleted within 30 days after the end of the
+          campaign.
+        </p>
+        <h2>6. Objection and removal possibility</h2>
+        <p>
+          You can revoke this consent to your participation in the campaign at
+          any time with effect for the future. To do this, all you have to do
+          is use the unsubscribe option at the end of the respective campaign
+          info mail. Please note that the lawfulness of the processing of your
+          data up to the time of revocation remains unaffected by the
+          revocation.
+        </p>
+        <h1 id="C7">VII. Donation tool</h1>
+        <h2>1. Description and scope of data processing</h2>
+        <p>
+          On our website, you have the possibility to support us once or
+          regularly with donations. To do this, all you have to do is click on
+          the donation button displayed on every page.
+        </p>
+        <p>
+          By clicking on this button, you will be taken to the donation page,
+          where you will be asked to accept cookies (if you have not done so
+          previously). Two cookies will then be set, one from Stripe, our
+          payment service provider, and one from PayPal, our second payment
+          service provider.
+        </p>
+        <p>
+          Depending on which payment service provider you choose, you will
+          either be taken directly to a PayPal page (after clicking on Donate
+          with PayPal), where you can enter your payment and legitimize it by
+          logging in to PayPal, or if you have clicked on "NEXT" and want to
+          pay using Stripe, you will be asked for further information (amount
+          of donation, cycle, name, email address, card number). We only send
+          the payment data to Stripe without further processing the data
+          ourselves.
+        </p>
+        <p>
+          Liberties does not see your bank or credit card details for either
+          payment method; these are only processed by the payment service
+          provider. Here (<a href="https://stripe.com/de/privacy"
+            >https://stripe.com/de/privacy</a
+          >
+          you can find Stripe's data protection declaration and other
+          conditions (https://stripe.com/de/privacy, depending on your
+          browsers language settings a translation might be available). You
+          can find PayPal's privacy policy at (<a
+            href="https://www.paypal.com/GR/webapps/mpp/ua/privacy-full"
+            >https://www.paypal.com/GR/webapps/mpp/ua/privacy-full</a
+          >) and the various other terms and conditions at (<a
+            href="https://www.paypal.com/GR/webapps/mpp/ua/legalhub-full"
+            >https://www.paypal.com/GR/webapps/mpp/ua/legalhub-full</a
+          >).
+        </p>
+        <h2>2. Legal basis for data processing</h2>
+        <p>
+          The legal basis for the processing of your personal data in
+          connection with your donation is Article 6(1)(b) GDPR.
+        </p>
+        <h2>3. Purpose of data processing</h2>
+        <p>
+          The donations help us to co-finance our work. To do this, we have to
+          process the data of the donors mentioned above.
+        </p>
+        <h2>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </h2>
+        <p>
+          Both payment service providers are located in the United States,
+          which means that data is transferred to third parties in a
+          non-secure third country. Therefore, additional security is required
+          if data is to be transferred to these payment service providers. In
+          the case of Stripe, this is achieved through the so-called "Privacy
+          Shield".
+        </p>
+        <p>
+          Stripe, Inc., 510 Townsend Street, San Francisco, California 94103,
+          is certified in accordance with the requirements of the Privacy
+          Shield. (<a
+            href="https://www.privacyshield.gov/participant?id=a2zt0000000TQOUAA4&amp;status=Active"
+            >https://www.privacyshield.gov/participant?id=a2zt0000000TQOUAA4&amp;status=Active</a
+          >). This means that Stripe meets the prerequisites for processing
+          the personal data of our donors as required by data protection law.
+        </p>
+        <p>
+          PayPal Inc. has issued binding corporate rules for data protection
+          (see
+          <a href="https://www.paypal.com/gr/webapps/mpp/ua/bcr"
+            >https://www.paypal.com/gr/webapps/mpp/ua/bcr</a
+          >
+          and
+          <a
+            href="https://cnpd.public.lu/fr/actualites/national/2018/02/bcr-paypal.html"
+            >https://cnpd.public.lu/fr/actualites/national/2018/02/bcr-paypal.html</a
+          >).
+        </p>
+        <p>
+          This means that the prerequisites are met for PayPal to be able to
+          process the personal data of our donors in accordance with data
+          protection laws.
+        </p>
+        <h2>5. Storage duration</h2>
+        <p>
+          Your data will remain stored with our financial accounting for as
+          long as we are obliged to keep our accounts under the relevant tax
+          law for associations. Specifically, the German Fiscal Code in §§ 140
+          ff. obliges us to keep our accounts for 6 to 10 years.
+        </p>
+        <h2>6. Objection and removal possibility</h2>
+        <p>
+          You can revoke your consent to the donation (at least for recurring
+          donations) at any time with future effect through Stripe or PayPal.
+          A revocation affects the personal data, which must be processed,
+          used or transmitted for (contractual) payment processing, only after
+          the expiry of legally prescribed retention periods. For this
+          purpose, please use the information provided by Stripe and PayPal
+          within the context of your donation. Please note that the lawfulness
+          of the processing of your data up to the time of revocation remains
+          unaffected by the revocation.
+        </p>
+        <h1 id="C8">VIII. E-mail contact, postal mail</h1>
+        <h2>1. Description and scope of data processing</h2>
+        <p>
+          You can use the provided e-mail address to contact us. In this case,
+          the personal user data transmitted with the e-mail will be stored.
+          The same applies similarly to postal mailings.
+        </p>
+        <p>
+          In this context, no data will be passed on to third parties. The
+          data will only be used for communication with the user.
+        </p>
+        <h2>2. Legal basis for data processing</h2>
+        <p>
+          The legal basis for the processing of the data transmitted in the
+          course of an e-mail transmission is Article 6(1)(f) GDPR. If the
+          purpose of the e-mail contact is the conclusion of a contract,
+          Article 6(1)(b) GDPR is an additional legal basis for the
+          processing. The same applies similarly to postal mail.
+        </p>
+        <p>
+          The provision of personal data is not required by law or contract,
+          but may serve to conclude a contract for the reasons stated above.
+        </p>
+        <h2>3. Purpose of data processing</h2>
+        <p>
+          In the event of contact being established by e-mail, this also
+          constitutes the required legitimate interest in the processing of
+          the data. The same applies similarly to postal deliveries.
+        </p>
+        <h2>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </h2>
+        <p>
+          As a matter of principle, we do not pass on personal data to third
+          parties unless we are obliged to do so by law or unless we have
+          obtained your consent to do so.
+        </p>
+        <p>
+          Excluded from this is the integration of the service provider who
+          provides our e-mail hosting. Other than that, no data is processed
+          outside of the European Union.
+        </p>
+        <h2>5. Storage duration</h2>
+        <p>
+          The data will be deleted as soon as it is no longer required for
+          achieving the purpose for which it was collected. For the personal
+          data sent by e-mail or post, this is the case when the respective
+          conversation with the user has ended. The conversation has ended
+          once it can be inferred from the circumstances that the matter in
+          question has been conclusively clarified. Further retention periods
+          may result from the German Tax Code or the Commercial Code (§ 195
+          BGB, 3-year regular limitation period).
+        </p>
+        <h2>6. Objection and removal possibility</h2>
+        <p>
+          At any time, the user has the possibility to revoke their consent to
+          the processing of personal data with effect for the future. For this
+          purpose, a new message via the contact form or a message by e-mail
+          is sufficient.
+        </p>
+        <p>
+          If the user contacts us by e-mail, they can object to the storage of
+          his personal data at any time. In such a case, the conversation
+          cannot be continued.
+        </p>
+        <p>
+          In this case, all personal data stored in the course of establishing
+          contact will be deleted unless legal retention periods conflict with
+          this. The same applies similarly to postal deliveries.
+        </p>
+        <h1 id="C9">IX. Applications</h1>
+        <h2>1. Purpose of data processing</h2>
+        <ul>
+          <li>Address management and e-mail communication</li>
+          <li>Conducting the application process</li>
+          <li>Reimbursement of travel expenses for applicants' arrival</li>
+          <li>
+            Data that may be used in the application process to assert,
+            exercise or defend potential legal claims (e.g. claims under the
+            German General Act on Equal Treatment)
+          </li>
+          <li>
+            In the case of recruitment for transfer to the personnel file
+          </li>
+          <li>Management of data protection rights of data subjects</li>
+        </ul>
+        <h2>2. Legal basis for data processing</h2>
+        <p>
+          Re 1: Address management and processing is part of the application
+          process. The processing of your personal data is necessary to
+          establish an employment relationship with you as the person
+          concerned, therefore we process your data in accordance with Article
+          6(1)(b) GDPR in conjunction with § 26 paragraph 1 sentence 1 German
+          Data Protection Act (BDSG).
+        </p>
+        <p>
+          Re 2: Since processing is necessary to establish an employment
+          relationship with you as the data subject, we process your data in
+          accordance with Article 6(1)(b) GDPR in conjunction with
+        </p>
+        <p>§ 26 paragraph 1 sentence 1 BDSG.</p>
+        <p>
+          Re 3: According to § 670 BGB, applicants are legally entitled to
+          reimbursement of the necessary interview costs if no provision has
+          been made as to which costs for travel to the interview will be
+          covered by the employer. Since the processing is necessary to
+          conduct the interview and thus to establish an employment
+          relationship with you as the person concerned, we process your data
+          in accordance with Article 6(1)(b)GDPR in conjunction with § 26
+          paragraph 1 sentence 1 BDSG.
+        </p>
+        <p>
+          Re 4: We may use your personal data, which we have received during
+          the application process, to assert, exercise or defend potential
+          legal claims (e.g. if Liberties would be exposed to claims under the
+          General Equal Treatment Act). The legal basis for the processing is
+          Article 6(1)(f) GDPR. Liberties has a legitimate interest in the use
+          of personal data for the aforementioned reasons.
+        </p>
+        <p>
+          Re 5: The data will be transferred to the personal file of the
+          potential employee after recruitment. The legal basis for the
+          processing is Article 6(1)(b) GDPR in conjunction with Article 26
+          paragraph 1 sentence 1 BDSG.
+        </p>
+        <p>
+          Re 6: The processing is carried out to comply with or fulfil the
+          legal obligation of the data subjects' rights under data protection
+          law mentioned in Chapter III (Articles 12-22) GDPR, to which
+          Liberties must comply as the responsible party within the meaning of
+          Article 4(7)GDPR. The legal basis for this processing is Article 6
+          (1)(c)GDPR.
+        </p>
+        <h2>3. Description of the categories of personal data</h2>
+        <p>
+          Re 1: Contact data (surname, first name, e-mail address, telephone
+          number, address data, contact type, fax number), communication
+          contents.
+        </p>
+        <p>
+          Re 2: Cover letter, curriculum vitae, photographs, certificates and
+          other proofs of qualification as well as other data which were sent
+          on a voluntary basis as part of the application process.
+        </p>
+        <p>
+          Re 3: Travel data (e.g. arrival and departure, travel expenses,
+          travel funds), bank details.
+        </p>
+        <p>
+          Re 4: Master data, communication data, data to prove a legally
+          compliant application process.
+        </p>
+        <p>
+          Re 5: Master data, communication data, covering letter, curriculum
+          vitae, photograph, certificates and other proofs of qualification as
+          well as other data which were sent voluntarily within the scope of
+          the application process.
+        </p>
+        <p>
+          Re 6: Declarations of revocation of any consent you may have given;
+          declarations of objection which you may submit to the processing of
+          your personal data; declarations and information which we receive
+          from you for or in connection with the assertion of your data
+          protection rights as specified in Chapter III (Articles 12-22) GDPR.
+        </p>
+        <h2>
+          4. Categories of recipients to whom the personal data have been or
+          will be disclosed
+        </h2>
+        <p>
+          Within Liberties, to those employees who need to receive the data in
+          order to carry out the application process (management, specialist
+          department, human resources department), as well as the telephone
+          service used in the performance of our activities and the IT service
+          providers with whom we have concluded appropriate contracts in order
+          to ensure the protection of your personal data at all times and, if
+          necessary, to the authorities for possible criminal investigations.
+        </p>
+        <h2>5. Storage duration</h2>
+        <p>
+          If Liberties has not recruited you after the application process has
+          been completed, your data will be deleted within 6 months of the
+          rejection of your application. If your application is successful and
+          you are employed by Liberties, your personal data will be deleted
+          once the purpose of the data processing no longer applies, at the
+          latest after termination of the employment relationship (storage
+          limitation), unless legal retention periods or legal limitation
+          provisions preclude deletion.
+        </p>
+        <h2>6. Necessity of providing the data</h2>
+        <p>
+          The provision of your personal data is neither required by law nor
+          by contract. However, the provision of your personal data is
+          necessary for the execution of the application process. If you do
+          not wish to make your personal data available, we will not be able
+          to consider you for an application process at Liberties.
+        </p>
+        <h1 id="C10">X. Embedded service providers</h1>
+        <p>
+          We integrate functions of external service providers on our websites
+          (e.g. the integration of videos) that have their own data protection
+          regulations.
+        </p>
+        <p>
+          If you allow third-party cookies on our website, the content of
+          those third-party providers will be downloaded. Your data will not
+          be transferred to these service providers beforehand.
+        </p>
+        <p>Below is a list of the service providers involved:</p>
+        <p>
+          <strong>1. Flourish.studio – </strong
+          ><strong>Interactive diagrams and creation of infographics</strong>
+        </p>
+        <p>
+          On some of our subpages we use embedded interactive diagrams and
+          infographics to present data and numbers in visually easy to
+          understand formats without requiring you to leave the Liberties
+          pages. When you open a subpage with an embedded Flourish.studio
+          diagram, the iframe (<a href="https://en.wikipedia.org/wiki/IFrame"
+            >https://en.wikipedia.org/wiki/IFrame</a
+          >) embedded by us communicates with the servers of
+          <a href="https://flourish.studio/">https://flourish.studio</a> and
+          you thereby accept their terms and conditions (<a
+            href="https://flourish.studio/terms/"
+            >https://flourish.studio/terms/</a
+          >). The provider of the service used is the British company Kiln
+          Enterprises Ltd, 08825531 G06, 16 Baldwin's Gardens, London EC1N
+          7RJ, United Kingdom. If the iframe is loaded and the selected cookie
+          setting permits this, the service provider uses cookies that collect
+          information about user behaviour. Further information on data
+          protection at "Flourish.studio" can be found in the provider's data
+          protection declaration (<a href="https://flourish.studio/privacy/"
+            >https://flourish.studio/privacy/</a
+          >).
+        </p>
+        <p>
+          <strong>2. InterAct – </strong
+          ><strong>Creation of embeddable quizzes and questionnaires</strong>
+        </p>
+        <p>
+          On some of our subpages we use embedded quizzes and questionnaires
+          to inform our users in an interactive format, without requiring them
+          to leave the Liberties pages. When users open a subpage with an
+          embedded InterAct quiz, the iframe (<a
+            href="https://en.wikipedia.org/wiki/Iframe"
+            >https://en.wikipedia.org/wiki/Iframe</a
+          >) that we have embedded communicates with the servers of
+          <a href="https://www.tryinteract.com">www.tryinteract.com</a> and
+          you thereby accept their general terms and conditions (<a
+            href="https://www.tryinteract.com/terms"
+            >https://www.tryinteract.com/terms</a
+          >). The provider of the service used is The Quiz Collective, Inc.
+          2443 Fillmore St #380-14013, San Francisco, CA 94115, USA. If the
+          iframe is loaded and the selected cookie setting permits this, the
+          provider uses cookies that collect information about user behavior.
+          For more information about privacy at TryInterAct, see the
+          provider's privacy statement (<a
+            href="https://www.tryinteract.com/privacy"
+            >https://www.tryinteract.com/privacy</a
+          >).
+        </p>
+        <p><strong>3. </strong><strong>Embedded image galleries</strong></p>
+        <p>
+          On some of our subpages we integrate a tool which displays images as
+          an automatically rolling gallery. The provider of this tool is
+          Flipsnack, a Smartketer LLC subsidiary, 156 2nd Street, San
+          Francisco, CA 94105 USA. You can view Flipsnack's terms and
+          conditions here (<a
+            href="https://www.flipsnack.com/legal-information/terms-of-service.html"
+            >https://www.flipsnack.com/legal-information/terms-of-service.html</a
+          >).
+        </p>
+        <p>
+          If you visit a subpage where the Flipsnack Gallery tool is embedded
+          in an iframe (<a href="https://en.wikipedia.org/wiki/Iframe"
+            >https://en.wikipedia.org/wiki/Iframe</a
+          >), the images will be loaded and displayed from the Flipsnack
+          servers. If you use the gallery, Flipsnack sets cookies in your
+          browser.
+        </p>
+        <p>
+          You can find further information on data protection at "Flipsnack"
+          in the provider's data protection declaration (<a
+            href="https://www.flipsnack.com/de/features/privacy-options"
+            >https://www.flipsnack.com/de/features/privacy-options</a
+          >).
+        </p>
+        <p><strong>4. </strong><strong>Embedded PDF viewer</strong></p>
+        <p>
+          On some subpages we offer extensive content in the form of PDF
+          files, which can be displayed directly on the website using a tool
+          we use, without requiring you to leave the liberties.eu website.
+        </p>
+        <p>
+          If you open one of our subpages on which the tool is integrated and
+          the content is displayed in an iframe (<a
+            href="https://en.wikipedia.org/wiki/Iframe"
+            >https://en.wikipedia.org/wiki/Iframe</a
+          >), the iframe establishes a connection to the provider and accepts
+          its general terms and conditions. If you use the embedded PDF
+          viewer, Isuu Inc sets cookies in your browser.
+        </p>
+        <p>
+          The tool is provided by Issuu Inc, 131 Lytton Ave, Palo Alto, CA
+          94301, United States. The general terms and conditions can be found
+          here (<a href="https://issuu.com/legal/terms"
+            >https://issuu.com/legal/terms</a
+          >).
+        </p>
+        <p>
+          Further information on data protection at "Issuu" can be found in
+          the provider's data protection declaration (<a
+            href="https://issuu.com/legal/privacy"
+            >https://issuu.com/legal/privacy</a
+          >).
+        </p>
+        <p>
+          <strong>5. </strong
+          ><strong>Embedded europa.eu video player - Theoplayer</strong>
+        </p>
+        <p>
+          On some subpages we embed a video player provided by the European
+          Union (<a
+            href="https://audiovisual.ec.europa.eu/en/ebs/both/20191025"
+            >https://audiovisual.ec.europa.eu/en/ebs/both/20191025</a
+          >), which allows you to view multilingual live and recorded
+          EU-related streams without having to leave the liberties.eu website.
+        </p>
+        <p>
+          If you open one of our subpages where this video viewer is
+          integrated and the content is displayed in an iframe (<a
+            href="https://en.wikipedia.org/wiki/Iframe"
+            >https://en.wikipedia.org/wiki/Iframe</a
+          >), a connection to the provider is established and their cookie
+          policy is accepted (<a href="https://ec.europa.eu/info/cookies_en"
+            >http://ec.europa.eu/info/cookies_en</a
+          >). If you use this video viewer, cookies are set in your browser.
+        </p>
+        <p>
+          The provider of the integrated EU video player is Theoplayer by THEO
+          Technologies NV, Philipssite 5, Bus 1 Leuven 3001, Belgium.
+        </p>
+        <p>
+          Further information on data protection at "Theoplayer" can be found
+          in the provider's data protection declaration (<a
+            href="https://ec.europa.eu/info/privacy-policy_en"
+            >https://ec.europa.eu/info/privacy-policy_en</a
+          >).
+        </p>
+        <p><strong>6. Embedded YouTube-Videos</strong></p>
+        <p>On some subpages we include YouTube videos.</p>
+        <p>
+          If you open one of our subpages on which a YouTube video is embedded
+          and the content is displayed in an iframe (<a
+            href="https://en.wikipedia.org/wiki/Iframe"
+            >https://en.wikipedia.org/wiki/Iframe</a
+          >), the iframe establishes a connection to the provider and
+          exchanges data with this provider. If you use this video viewer,
+          cookies are set in your browser.
+        </p>
+        <p>
+          Usually we integrate YouTube videos using "youtube-nocookies"; older
+          videos may still be integrated directly via YouTube.
+        </p>
+        <p>
+          The provider of the YouTube player is YouTube, LLC 901 Cherry Ave,
+          94066 San Bruno, CA, USA, a company belonging to Google Inc.,
+          Amphitheatre Parkway, Mountain View, CA 94043, USA.
+        </p>
+        <p>
+          Further information on data protection at "YouTube" can be found in
+          the provider's data protection declaration (<a
+            href="https://policies.google.com/privacy?hl=en"
+            >https://www.google.de/intl/de/policies/privacy/</a
+          >).
+        </p>
+        <p><strong>7. Embedded Facebook videos</strong></p>
+        <p>On some subpages we include Facebook videos.</p>
+        <p>
+          When you open one of our subpages that includes a Facebook video and
+          the content is displayed in an iframe (<a
+            href="https://en.wikipedia.org/wiki/Iframe"
+            target="_blank"
+            >https://en.wikipedia.org/wiki/Iframe</a
+          >), the iframe connects to the provider and exchanges data with it.
+          If you use this video viewer, cookies are set in your browser.
+        </p>
+        <p>
+          The Facebook video player is offered by Facebook Ireland Ltd, 4
+          Grand Canal Square, Grand Canal Harbour, Dublin 2 Ireland.
+        </p>
+        <p>
+          For more information about privacy at Facebook, please see the
+          provider's privacy policy (<a
+            href="https://www.facebook.com/privacy/explanation"
+            target="_blank"
+            >https://www.facebook.com/privacy/explanation</a
+          >).
+        </p>
+        <p><strong>8. Embedded Vimeo videos</strong></p>
+        <p>On some subpages we include videos using Vimeo.</p>
+        <p>
+          If you open one of our subpages that includes a Vimeo video and the
+          content is displayed in an iframe
+          (<a>https://en.wikipedia.org/wiki/Iframe</a>), the iframe
+          establishes a connection to the provider and exchanges data with
+          this provider. If you use this video viewer, cookies are set in your
+          browser.
+        </p>
+        <p>
+          The provider of the Vimeo video player is Vimeo LCC, 555 West 18th
+          Street, New York, New York 10011, USA.
+        </p>
+        <p>
+          For more information about Vimeo's privacy practices, please refer
+          to the provider's privacy policy (<a
+            href="https://vimeo.com/privacy"
+            >https://vimeo.com/privacy</a
+          >).
+        </p>
+        <p><strong>9. Embedded Twitter videos</strong></p>
+        <p>On some subpages we include videos from Twitter.</p>
+        <p>
+          If you open one of our subpages that includes a Twitter video and
+          the content is displayed in an iframe (<a
+            href="https://en.wikipedia.org/wiki/Iframe"
+            >https://en.wikipedia.org/wiki/Iframe</a
+          >), the iframe establishes a connection to the provider and
+          exchanges data with this provider. If you use this video viewer,
+          cookies are set in your browser.
+        </p>
+        <p>
+          The provider of the Twitter video player is Twitter International
+          Company, One Cumberland Place, Fenian Street, Dublin 2, D02 AX07,
+          Ireland.
+        </p>
+        <p>
+          For more information about Twitter's privacy practices, please refer
+          to the provider's privacy policy (<a
+            href="https://twitter.com/en/privacy"
+            >https://twitter.com/en/privacy</a
+          >).
+        </p>
+        <p>
+          <strong>10. </strong
+          ><strong>Telephone contacts via OpenMedia / NewMode</strong>
+        </p>
+        <p>
+          On some subpages we offer the possibility to call your political
+          representative (e.g. in the European Parliament). For this purpose
+          we are using a tool which is operated by OpenMind in cooperation
+          with New/Mode.
+        </p>
+        <p>
+          If you open one of our subpages that includes this calling tool and
+          the content is displayed in an iframe (<a
+            href="https://en.wikipedia.org/wiki/Iframe"
+            >https://en.wikipedia.org/wiki/Iframe</a
+          >), the iframe establishes a connection to the provider and
+          exchanges data with this provider. If you use this calling tool,
+          cookies are set in your browser.
+        </p>
+        <p>
+          Providers of the tool are OpenMedia, 1424 Commercial Drive, PO Box
+          #21674, Vancouver, BC, CANADA V5L 5G3 and New/Mode Inc, 321 Main
+          Street, Vancouver, BC, CANADA.
+        </p>
+        <p>
+          Further information on data protection at "OpenMedia" can be found
+          in the provider's data protection declaration (<a
+            href="https://openmedia.org/privacy-policy"
+            >https://openmedia.org/privacy-policy</a
+          >).
+        </p>
+        <p>
+          Further information on data protection at "New/Mode" can be found in
+          the provider's data protection declaration (<a
+            href="https://www.newmode.net/privacy"
+            >https://www.newmode.net/privacy</a
+          >).
+        </p>
+        <h1 id="C11">XI. Social media links</h1>
+        <p>
+          On our website, we offer you the opportunity to share these
+          respective websites via social media. However, we only use share
+          links to integrate social media. This means that your data is not
+          automatically transferred to social media providers when you visit
+          our websites.
+        </p>
+        <p>
+          Only if you follow the appropriate link are you directed to the
+          social media, where your data will be processed accordingly.
+        </p>
+        <p>We provide the sharing function for the following social media:</p>
+        <ul>
+          <li>Twitter</li>
+          <li>Facebook</li>
+          <li>LinkedIn</li>
+        </ul>
+        <p>
+          We also provide the sharing function by e-mail and by copying the
+          URL of the respective website.
+        </p>
+        <p>
+          On our website we also refer to our social media pages, specifically
+          our Facebook page, our Twitter account and our YouTube account.
+        </p>
+        <p>
+          With these links, too, your data will only be processed by the
+          social media once you click on these links, leave our website and
+          open our respective page at the provider of the social medium.
+        </p>
+        <h1 id="C12">XII. Web analytics tool</h1>
+        <h2>1. Description and scope of data processing</h2>
+        <p>
+          When you visit our website, your surfing behaviour can be analysed
+          statistically. This is done primarily with cookies and web analytics
+          programs. We use the open source software tool Matomo on our
+          website. The software is set so that the IP addresses are not stored
+          in full. It is not possible to assign the abbreviated IP address to
+          the accessing computer.
+        </p>
+        <h2>2. Legal basis for data processing</h2>
+        <p>
+          The legal basis for the processing of your personal data in
+          connection with statistical analysis is Article 6(1)(f) GDPR.
+        </p>
+        <h2>3. Purpose of data processing</h2>
+        <p>
+          The statistics help us to optimise our work, e.g. to constantly
+          improve our website and its user-friendliness.
+        </p>
+        <h2>
+          4. Categories of recipients of personal data and data processing
+          outside of the European Union
+        </h2>
+        <p>
+          Matomo software runs exclusively on a server controlled by us.
+          Specifically, we use the hosting services of Contabo GmbH (Aschauer
+          Straße 32a, 81549 Munich, website:
+          <a href="https://www.contabo.de" target="_blank">www.contabo.de</a
+          >).
+        </p>
+        <p>We have concluded a data processing agreement with Contabo.</p>
+        <h2>5. Storage duration</h2>
+        <p>
+          The data will be deleted after 5 years, i.e. as soon as they are no
+          longer needed for our records.
+        </p>
+        <h2>6. Objection and removal possibility</h2>
+        <p>
+          Matomo uses cookies. Cookies that have already been placed can be
+          deleted at any time. This can also be done automatically. We also
+          offer our users the option of opting out of the analytics process on
+          our website. This option is available here:
+          <a
+            href="https://www.liberties.eu/en/cookies/settings"
+            target="_blank"
+            >Cookie Settings</a
+          >.
+        </p>
+        <p>
+          Information regarding the privacy settings of the Matomo software
+          can be found here:
+          <a
+            href="https://backend.staatsbibliothek-berlin.de/http:/"
+            target="NÃ¤here"
+            title="zu"
+            >https://matomo.org/docs/privacy</a
+          >/.
+        </p>
+        <h1 id="C13">XIII. Rights of the data subject</h1>
+        <p>
+          If your personal data is processed, you are the data subject as
+          defined by the GDPR and you have the following rights vis-à-vis the
+          controller:
+        </p>
+        <h2>1. Right to information</h2>
+        <p>
+          You may at any time, with due regard to the requirements of Article
+          15 of the GDPR, request information from the controller as to
+          whether and how we are processing your personal data.
+        </p>
+        <h2>2. Right to rectification</h2>
+        <p>
+          With due regard to the provisions of Article 16 of the GDPR, you
+          have the right to have your personal data corrected and/or completed
+          by the data controller if the processed personal data relating to
+          you is inaccurate or incomplete. The data controller must rectify
+          the data immediately.
+        </p>
+        <h2>3. Right to restriction of processing</h2>
+        <p>
+          With due regard to the provisions of Article 18 of the GDPR, you may
+          require the controller to restrict the processing.
+        </p>
+        <h2>4. Right to erasure</h2>
+        <p>
+          With due regard to the provisions of Article 17 of the GDPR, you may
+          request the controller to delete your personal data.
+        </p>
+        <h2>5. Notification obligation</h2>
+        <p>
+          If you have exercised your right to rectify, cancel or limit the
+          processing of your personal data against the controller, the latter
+          is obliged to notify all recipients to whom your personal data have
+          been disclosed of this rectification, cancellation or limitation,
+          unless this proves impossible or involves a disproportionate effort.
+        </p>
+        <p>
+          You have the right to be informed of these recipients vis-à-vis the
+          data controller pursuant to Article 19 of the GDPR.
+        </p>
+        <h2>6. Right to data portability</h2>
+        <p>
+          With due regard to the requirements of Article 20 of the GDPR, you
+          have the right to receive the personal data concerning you that you
+          have provided to the controller in a structured, commonly used and
+          machine-readable format.
+        </p>
+        <h2>7. Right to object</h2>
+        <p>
+          You have the right, subject to the conditions of Article 21 of the
+          GDPR, to object at any time, for reasons arising from your
+          particular situation, to the processing of your personal data under
+          Article 6(1)(e) or (f) GDPR, even if the profiling is based on these
+          provisions.
+        </p>
+        <h2>
+          8. Right to revoke the declaration of consent under data protection
+          law
+        </h2>
+        <p>
+          You have the right to revoke your declaration of consent under data
+          protection law at any time. The revocation of your consent does not
+          affect the legality of the processing carried out on the basis of
+          your consent up to the point of revocation.
+        </p>
+        <h2>9. Right of appeal to a supervisory authority</h2>
+        <p>
+          Without prejudice to any other administrative or judicial remedy,
+          you have the right to complain to a supervisory authority, in
+          particular in the Member State of your residence, place of work or
+          place of presumed infringement, if you consider that the processing
+          of your personal data is in breach of the GDPR.
+        </p>
+        <p>
+          The supervisory authority where the complaint was lodged will inform
+          the complainant of the status and outcome of the complaint,
+          including the possibility of a judicial remedy under Article 78
+          GDPR.
+        </p>
+        <p>The supervisory authority in charge of Liberties.eu is:</p>
+        <p>
+          Berliner Beauftragte für Datenschutz und Informationsfreiheit<br />Friedrichstr.
+          219<br />10969 Berlin<br /><a
+            href="https://www.datenschutz-berlin.de/"
+            >www.datenschutz-berlin.de</a
+          >
+        </p>
+        <p>
+          Date of data protection declaration: 11 November 2019 (German
+          version)
+        </p>
+        <p>
+          In the event of a dispute regarding the "Privacy Policy
+          <a href="https://www.liberties.eu/">www.liberties.eu</a>", the
+          German-language version shall prevail.
+        </p>
+      </div>
     </div>
   </div>
 </div>
-  
-  
-
-
