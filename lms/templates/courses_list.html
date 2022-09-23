@@ -4,37 +4,29 @@
 
 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
 
-  <div class="relative pt-8 pb-4 px-4">
-    <div class="absolute inset-0">
-      <div class="bg-white h-1/3 sm:h-2/3"></div>
+  <div class="relative">
+    <div class="sm:pb-12 sm:pt-14 py-6 sm:flex items-start justify-between">
+      <h1 class="font-roboto font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl mb-6 sm:mb-0">
+        Our Courses
+      </h1>
     </div>
-    <div class="relative max-w-7xl mx-auto">
-      <div class="text-center">
-        <h1 class="section-title">
-          Our <span class="highlight-cyan">Courses<span>
-        </h1>
-        <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4 font-sans">
-          These are the next scheduled courses being run.
-        </p>
-      </div>
-      <div class="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-        ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
-        %for course in courses[:homepage_course_max]:
-          <!-- Course cards go here -->
-          <%include file="course.html" args="course=course" />
-        %endfor
-      </div>
+    <div class="grid gap-8 sm:gap-12">
+      ## limiting the course number by using HOMEPAGE_COURSE_MAX as the maximum number of courses
+      %for course in courses[:homepage_course_max]:
+        <!-- Course cards go here -->
+        <%include file="course.html" args="course=course" />
+      %endfor
+    </div>
 
-      ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
-      <!-- % if homepage_course_max and len(courses) > homepage_course_max: -->
-        <div class="">
-          <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-            <a href="/courses" class="link-btn">
-              More Courses
-            </a>
-          </div>
+    ## in case there are courses that are not shown on the homepage, a 'View all Courses' link should appear
+    <!-- % if homepage_course_max and len(courses) > homepage_course_max: -->
+      <div class="">
+        <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+          <a href="/courses" class="link-btn">
+            More Courses
+          </a>
         </div>
-      <!-- % endif -->
-    </div>
+      </div>
+    <!-- % endif -->
   </div>
 % endif
