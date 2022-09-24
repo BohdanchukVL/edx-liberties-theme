@@ -27,7 +27,7 @@
     <h1 class="section-title mt-6 text-center text-3xl font-extrabold text-gray-900 font-roboto"><%- gettext("Sign In") %></h1>
 <% } %>
 
-<form id="login" class="login-form py-8 px-4 sm:px-10 mt-4 flex md:flex-col bg-gray-100 rounded overflow-hidden sm:h-auto" tabindex="-1" method="POST">
+<form id="login" class="login-form flex-column py-8 px-4 sm:px-10 mt-4 flex md:flex-col bg-gray-100 rounded overflow-hidden sm:h-auto" tabindex="-1" method="POST">
 
     <p class="sr">
         <% if ( context.providers.length > 0 && !context.currentProvider || context.hasSecondaryProviders ) { %>

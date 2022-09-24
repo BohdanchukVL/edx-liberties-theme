@@ -310,7 +310,7 @@ footer a:hover {
   font-size: 1rem;
   line-height: 1.5rem;
 }
-.content h1, .content h2, .content h3, .content h4 {
+.content h1, .content h2, .content h3, .content h4, .header-courses {
   font-weight: 700;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -320,7 +320,7 @@ footer a:hover {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
-.content h2 {
+.content h2, .header-courses {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
@@ -356,7 +356,7 @@ footer a:hover {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-  .content h2 {
+  .content h2, .header-courses {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
@@ -379,7 +379,7 @@ footer a:hover {
     font-size: 3.75rem;
     line-height: 1;
   }
-  .content h2 {
+  .content h2, .header-courses {
     font-size: 3.75rem;
     line-height: 1;
   }
@@ -953,6 +953,10 @@ img, video {
 .footer-label, .footer-label.-terms {
   color: rgba(255,255,255,var(--tw-text-opacity));
 }
+.mobile-menu {
+  padding-top: 50px;
+  border-top: none;
+}
 @media (min-width: 768px) {
   .footer-contacts {
     padding-bottom: 2.5rem;
@@ -971,6 +975,9 @@ img, video {
   .global-header .header-logo a {
     margin: 0px 0 0 40px;
   }
+  .global-header .main-header {
+    height: auto;
+  } 
 }
 h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5, h6 {
   font-family: 'Roboto Condensed';
