@@ -967,7 +967,7 @@ img, video {
     padding-bottom: 3rem;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   .global-header .header-logo a {
     margin: 0px 0 0 40px;
   }
