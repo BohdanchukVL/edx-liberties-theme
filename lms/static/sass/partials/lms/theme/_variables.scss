@@ -5,7 +5,7 @@
 // Note: define colors needed by your theme first
 
 // // Define the primary red color
-$red: #d9534f;
+$red: #ec5713;
 
 // // Make red the primary color
 $primary: $red;
@@ -14,4 +14,5 @@ $primary: $red;
 // $font-family-sans-serif: cursive;
 
 // // Initialize the Open edX Bootstrap theme
+//@import "~@edx/edx-bootstrap/scss/open-edx/theme.scss";
 @import 'edx-bootstrap/sass/open-edx/theme';
