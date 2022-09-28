@@ -22,55 +22,45 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
   allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
   should_redirect_to_authn_mfe = should_redirect_to_authn_microfrontend()
 %>
-<nav class="nav-links" aria-label=${_("Supplemental Links")}>
-  <div class="main">
-    % if mktg_site_enabled:
-    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-      <a href="${marketing_link('HOW_IT_WORKS')}">${_("How it Works")}</a>
-    </div>
-    % if courses_are_browsable:
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        <a href="${marketing_link('COURSES')}">${_("Courses")}</a>
-      </div>
-    % endif
-    <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-      <a href="${marketing_link('SCHOOLS')}">${_("Schools")}</a>
-    </div>
-  % endif
-  % if allows_login:
-    % if can_discover_courses:
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        <a href="/courses">${_('Explore courses')}</a>
-      </div>
-    %endif
-  % endif
-  </div>
-  <div class="secondary mt-6 sm:mt-4">
+<div class="hidden w-full md:flex justify-between align-center md:ml-5" id="mobile-menu">
+  <ul class="nav-links flex flex-col p-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm">
+    <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a href="javascript:void(0);" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex justify-center md:justify-between items-center">
+          ${_("Training and Coaching")}
+        </a>
+       
+        <div id="dropdownNavbar" class="dropdown hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+          <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+            % if allows_login:
+              % if can_discover_courses:
+                <li>
+                  <a href="/courses" class="block border-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">
+                    ${_('Knowledge Hub')}
+                  </a>
+                </li>
+              %endif
+            % endif
+          </ul>
+        </div>
+    </li>
+  </ul>
+
+  <div class="secondary flex align-center justify-center w-full md:justify-end">
     <div class="flex items-center">
       % if allows_login:
         % if allow_public_account_creation:
           % if should_redirect_to_authn_mfe:
-            <div class="mobile-nav-item hidden-mobile nav-item p-0">
-                <a class="donation-buttons text-base m-0 font-roboto border-none relative z-50
-                bg-black text-white rounded shadow-inner ml-4 sm:ml-8 lg:ml-0 xl:ml-8 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
-            </div>
+            <a class="donation-buttons text-base m-0 font-roboto border-none shadow-inner relative z-50 bg-black text-white rounded shadow-inner md:ml-4 lg:ml-0 xl:ml-8 py-1 mr-4 sm:py-3 px-4 sm:px-6 md:px-9 lg:px-6 xl:px-6" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
           % else:
-            <div class="mobile-nav-item hidden-mobile nav-item p-0">
-                <a class="donation-buttons text-base m-0 font-roboto border-none relative z-50
-                bg-black text-white rounded shadow-inner ml-4 sm:ml-8 lg:ml-0 xl:ml-8 sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="/register${login_query()}">${_("Register")}</a>
-            </div>
+            <a class="donation-buttons text-base m-0 font-roboto border-none shadow-inner relative z-50 bg-black text-white rounded shadow-inner md:ml-4 lg:ml-0 xl:ml-8 py-1 mr-4 sm:py-3 px-4 sm:px-6 md:px-9 lg:px-6 xl:px-6" href="/register${login_query()}">${_("Register")}</a>
           % endif
         % endif
         % if should_redirect_to_authn_mfe:
-          <div class="mobile-nav-item hidden-mobile nav-item p-0">
-              <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
-          </div>
+          <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded py-1 sm:py-3 px-4 sm:px-6 md:px-9 lg:px-6 xl:px-9" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>
         % else:
-          <div class="mobile-nav-item hidden-mobile nav-item p-0">
-              <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded sm:py-3 px-4 sm:px-2 md:px-5 lg:px-2 xl:px-5" href="/login${login_query()}">${_("Sign in")}</a>
-          </div>
+          <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded py-1 sm:py-3 px-4 sm:px-6 md:px-9 lg:px-6 xl:px-9" href="/login${login_query()}">${_("Sign in")}</a>
         % endif
       % endif
     </div>
   </div>
-</nav>
+</div>

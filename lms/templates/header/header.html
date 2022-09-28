@@ -42,7 +42,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
   </script>
 % endif
 
-<header class="bg-black overflow-hidden border-transparent shadow-none border-opacity-0 global-header ${'slim' if course else ''}">
+<header class="header py-3 bg-black ${'slim' if course else ''}">
     % if use_cookie_banner:
         ${static.renderReact(
             component="CookiePolicyBanner",
@@ -50,21 +50,19 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
             props={}
         )}
     % endif
-    <div class="mx-auto max-w-7xl main-header  border-opacity-0">
+    <div class="main-detached-nav flex flex-row flex-wrap md:flex-nowrap items-center sm:h-auto px-6 font-roboto font-bold uppercase bg-black sm:pt-2 lg:pt-0 sm:pb-2 lg:pb-0">
         <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
-        <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
-        </div>
+        <button data-collapse-toggle="mobile-menu" type="button" class="mobile-menu-toggler inline-flex justify-center items-center ml-auto md:ml-3 text-gray-400 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-gray-500" aria-controls="mobile-menu-2" aria-expanded="false" aria-label=${_("Options Menu")}>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
         % if user.is_authenticated:
             <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
         % else:
             <%include file="navbar-not-authenticated.html" args="online_help_token=online_help_token"/>
         % endif
     </div>
-    <div class="mobile-menu hidden" aria-label=${_("More Options")} role="menu" id="mobile-menu"></div>
 </header>
 
 % if course:

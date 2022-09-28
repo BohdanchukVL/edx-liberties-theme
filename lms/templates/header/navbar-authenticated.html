@@ -26,34 +26,26 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     help_link = doc_link
 %>
 
-<div class="nav-links">
-  <div class="main">
+<div class="hidden w-full md:flex justify-between align-center md:ml-5" id="mobile-menu">
+  <ul class="nav-links flex flex-col p-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm">
     % if show_dashboard_tabs:
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-        <a class="${'active ' if reverse('dashboard') == request.path else ''}tab-nav-link font-roboto" href="${reverse('dashboard')}"
-             aria-current="${'page' if reverse('dashboard') == request.path else 'false'}">
-             ${_("Courses")}
+      <li class="${'active ' if reverse('dashboard') == request.path else ''} mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a href="${reverse('dashboard')}" class="flex justify-center md:justify-between items-center">
+          ${_("Courses")}
         </a>
-      </div>
+      </li>
+    % endif
+    
       % if show_program_listing:
-        <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-          <a class="${'active ' if reverse('program_listing_view') in request.path else ''}tab-nav-link font-roboto" href="${reverse('program_listing_view')}"
-             aria-current="${'page' if reverse('program_listing_view') == request.path else 'false'}">
+        <li class="${'active ' if reverse('program_listing_view') in request.path else ''} mobile-nav-item hidden-mobile nav-item nav-tab">
+          <a href="${reverse('program_listing_view')}" aria-current="${'page' if reverse('program_listing_view') == request.path else 'false'}">
              ${_("Programs")}
           </a>
-        </div>
+        </li>
       % endif
-    % endif
-    % if show_explore_courses:
-      <div class="mobile-nav-item hidden-mobile nav-item nav-tab">
-          <a class="tab-nav-link discover-new-link font-roboto" href="${marketing_link('COURSES')}"
-             aria-current="${'page' if '/courses' in request.path else 'false'}">
-             ${_('Discover New')}
-          </a>
-      </div>
-    % endif
-  </div>
-  <div class="secondary mt-6">
+  </ul>
+
+  <div class="secondary flex align-center justify-center w-full md:justify-end">
     <%include file="user_dropdown.html"/>
   </div>
 </div>
