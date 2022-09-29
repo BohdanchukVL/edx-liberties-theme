@@ -26,7 +26,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     help_link = doc_link
 %>
 <div class="flex flex-wrap w-full md:flex-nowrap justify-between items-center mx-auto">
-  <%include file="navbar-logo-header.html" />
+  <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
   
   <button data-collapse-toggle="mobile-menu" type="button" class="mobile-menu-toggler inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-gray-500" aria-controls="mobile-menu-2" aria-expanded="false" aria-label=${_("Options Menu")}>
     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

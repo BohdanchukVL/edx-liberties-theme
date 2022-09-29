@@ -1,6 +1,6 @@
 ## mako
 
-<%page expression_filter="h"/>
+<%page expression_filter="h" args="online_help_token"/>
 
 <%namespace name='static' file='../static_content.html'/>
 <%namespace file='../main.html' import="login_query"/>
@@ -23,7 +23,7 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
   should_redirect_to_authn_mfe = should_redirect_to_authn_microfrontend()
 %>
 <div class="flex flex-wrap w-full md:flex-nowrap justify-between items-center mx-auto">
-  <%include file="navbar-logo-header.html" />
+  <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
   % if allows_login:
     <div class="flex md:hidden ml-auto items-center">
       % if allow_public_account_creation:
