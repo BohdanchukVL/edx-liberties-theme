@@ -10,48 +10,13 @@
 
 <form id="register" class="register-form flex-column py-8 px-4 sm:px-10 mt-4 flex md:flex-col bg-gray-100 rounded overflow-hidden sm:h-auto" autocomplete="off" tabindex="-1" method="POST">
 
-    <% if (!context.currentProvider) { %>
-        <% if (context.providers.length > 0 || context.hasSecondaryProviders) { %>
-            <div class="login-providers">
-                <div class="section-title lines">
-                    <h3>
-                        <span class="text font-roboto"><%- gettext("Create an account using") %></span>
-                    </h3>
-                </div>
-                <%
-                _.each( context.providers, function( provider) {
-                    if ( provider.registerUrl ) { %>
-                        <button type="button" class="button button-primary button-<%- provider.id %> login-provider register-<%- provider.id %>" data-provider-url="<%- provider.registerUrl %>">
-                            <div class="icon <% if ( provider.iconClass ) { %>fa <%- provider.iconClass %><% } %>" aria-hidden="true">
-                                <% if ( provider.iconImage ) { %>
-                                    <img class="icon-image" src="<%- provider.iconImage %>" alt="<%- provider.name %> icon" />
-                                <% } %>
-                            </div>
-                            <span aria-hidden="true"><%- provider.name %></span>
-                            <span class="sr"><%- _.sprintf( gettext("Create account using %(providerName)s."), {providerName: provider.name} ) %></span>
-                        </button>
-                <%  }
-                }); %>
-
-                <% if ( context.hasSecondaryProviders ) { %>
-                    <button type="button" class="button-secondary-login form-toggle" data-type="institution_login">
-                        <%- gettext("Use my institution/campus credentials") %>
-                    </button>
-                <% } %>
-            </div>
-            <% if (!context.is_require_third_party_auth_enabled) { %>
-                <div class="section-title lines">
-                    <h3>
-                        <span class="text font-roboto"><%- gettext("or create a new one here") %></span>
-                    </h3>
-                </div>
-            <% } %>
-        <% } else if (!context.is_require_third_party_auth_enabled) { %>
-            <h1 class="section-title mt-6 text-center text-3xl font-extrabold text-gray-900"><%- gettext('Create an Account')%></h1>
-        <% } %>
-    <% } else if (context.autoRegisterWelcomeMessage) { %>
-        <span class="auto-register-message"><%- context.autoRegisterWelcomeMessage %></span>
-    <% } %>
+    <div class="login-providers">
+        <div class="section-title lines">
+            <h3>
+                <span class="text font-roboto">CREATE A NEW ACCOUNT HERE</span>
+            </h3>
+        </div>
+    </div>
 
     <div class="form-fields <% if (context.is_require_third_party_auth_enabled) { %>hidden<% } %>">
         <%= context.fields /* xss-lint: disable=underscore-not-escaped */ %>

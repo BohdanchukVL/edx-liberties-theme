@@ -11,6 +11,9 @@
 .container::after {
   display: none;
 }
+.dropdown {
+  z-index: 999;
+}
 .toggle-user-dropdown .fa-caret-down:before {
   color: #fff;
 }
@@ -1028,6 +1031,9 @@ img, video {
   .global-header .main-header {
     height: auto;
   } 
+  .logo {
+    max-width: 160px;
+  }
 }
 h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5, h6 {
   font-family: 'Roboto Condensed';
@@ -1077,4 +1083,11 @@ h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5
 }
 #manage-cookies a.close:hover {
   opacity: 0.4;
+}
+footer .container>div {
+  display: flex;
+  table-layout: inherit;
+  width: 100%;
+  border: none;
+  background: transparent;
 }
