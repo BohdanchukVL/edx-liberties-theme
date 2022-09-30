@@ -35,7 +35,7 @@ from lms.djangoapps.branding import api as branding_api
       <a class="flex items-center" href="${branding_api.get_home_url()}">
         <%block name="navigation_logo">
           <div class="logo">
-            <img src="../../static/assets/img/logo.png" />
+            <img src="${static.url('assets/img/logo.png')}" />
           </div>
         </%block>
         % if settings.LOGO_IMAGE_EXTRA_TEXT == 'edge':
