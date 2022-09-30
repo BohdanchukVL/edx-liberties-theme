@@ -54,7 +54,7 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
       % if allows_login:
         % if can_discover_courses:
           <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
-            <a href="javascript:void(0);" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex justify-center md:justify-between items-center">${_("Training and Coaching")}</a>
+            <a href="javascript:void(0);" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex justify-center md:justify-between whitespace-nowrap items-center">${_("Training and Coaching")}</a>
         
             <div id="dropdownNavbar" class="dropdown hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
               <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
@@ -75,7 +75,7 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
             % if should_redirect_to_authn_mfe:
               <a class="text-base m-0 font-roboto border-none relative bg-black text-white md:ml-4 lg:ml-0 xl:ml-8 py-1 sm:py-3 px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
             % else:
-              <a class="text-base m-0 font-roboto border-none relative bg-black text-white md:ml-4 lg:ml-0 xl:ml-8 py-1 sm:py-3 px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
+              <a class="text-base m-0 font-roboto border-none relative bg-black text-white md:ml-4 lg:ml-0 xl:ml-8 py-1 sm:py-3 px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2" href="/register${login_query()}">${_("Register")}</a>
             % endif
           % endif
           % if should_redirect_to_authn_mfe:
