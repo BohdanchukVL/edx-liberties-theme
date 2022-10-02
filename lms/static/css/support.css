@@ -223,6 +223,9 @@ footer a:hover {
 .global-header .secondary .menu-title {
   margin: 0;
 }
+.wrap-instructor-info .instructor-info-action:hover {
+  background-color: #73d5ff;
+}
 @media (min-width: 992px) {
   .header .nav-links .nav-tab a {
     border-bottom: 2px solid transparent !important;
@@ -367,7 +370,7 @@ footer a:hover {
 #discovery-input {
   padding: 0 15px;
 }
-.content h1 {
+.content h1, .course-info h1 {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
@@ -403,7 +406,7 @@ footer a:hover {
     font-size: 1.125rem;
     line-height: 2rem;
   }
-  .content h1 {
+  .content h1, .course-info h1 {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
@@ -426,7 +429,7 @@ footer a:hover {
     font-size: 3rem;
     line-height: 1;
   }
-  .content h1 {
+  .content h1, .course-info h1 {
     font-size: 3.75rem;
     line-height: 1;
   }
