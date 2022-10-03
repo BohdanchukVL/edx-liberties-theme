@@ -73,7 +73,7 @@ from six import string_types
             <span>${course.display_org_with_default}</span>
           </div>
   
-          <div class="main-cta">
+          <div>
           %if user.is_authenticated and registered:
             %if show_courseware_link:
               <a href="${course_target}">
