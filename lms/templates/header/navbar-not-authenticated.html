@@ -22,10 +22,10 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
   allow_public_account_creation = static.get_value('ALLOW_PUBLIC_ACCOUNT_CREATION', settings.FEATURES.get('ALLOW_PUBLIC_ACCOUNT_CREATION'))
   should_redirect_to_authn_mfe = should_redirect_to_authn_microfrontend()
 %>
-<div class="flex flex-wrap w-full md:flex-nowrap justify-between items-center mx-auto">
+<div class="flex flex-wrap w-full xl:flex-nowrap justify-between items-center mx-auto">
   <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
   % if allows_login:
-    <div class="flex md:hidden ml-auto items-center">
+    <div class="flex xl:hidden ml-auto items-center">
       % if allow_public_account_creation:
         % if should_redirect_to_authn_mfe:
           <a class="text-base m-0 font-roboto border-none relative bg-black text-white md:ml-4 lg:ml-0 xl:ml-8 py-1 sm:py-3 px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
@@ -43,54 +43,139 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
     </div>
   % endif
      
-  <button data-collapse-toggle="mobile-menu" type="button" class="mobile-menu-toggler inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-blue-300 dark:focus:ring-gray-500" aria-controls="mobile-menu-2" aria-expanded="false" aria-label=${_("Options Menu")}>
+  <button data-collapse-toggle="mobile-menu" type="button" class="mobile-menu-toggler inline-flex justify-center items-center ml-3 text-gray-400 rounded-lg xl:hidden focus:outline-none focus:ring-2 focus:ring-blue-300" aria-controls="mobile-menu-2" aria-expanded="false" aria-label=${_("Options Menu")}>
     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
     </svg>
   </button>
   
-  <div class="hidden w-full md:flex justify-between align-center md:ml-5" id="mobile-menu">
-    <ul class="nav-links flex flex-col p-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm">
-      % if allows_login:
-        % if can_discover_courses:
-          <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
-            <a href="javascript:void(0);" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex justify-center md:justify-between whitespace-nowrap items-center">${_("Training and Coaching")}</a>
+  <div class="hidden w-full xl:flex justify-between align-center xl:ml-5" id="mobile-menu">
+    <ul class="nav-links flex flex-col p-4 xl:flex-row xl:space-x-8 xl:mt-0 xl:text-sm">
+      <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a href="javascript:void(0);" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex justify-center md:justify-between whitespace-nowrap items-center">About Us</a>
+    
+        <div id="dropdownNavbar" class="dropdown hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+          <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+            <li>
+              <a href="https://www.liberties.eu/en/about/organisation" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                About Us
+              </a>
+            </li>
+            <li>
+              <a href="https://www.liberties.eu/en/in-the-news" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                In the news
+              </a>
+            </li>
+            <li>
+              <a href="https://www.liberties.eu/en/about/members-of-our-board" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                Members of the Board
+              </a>
+            </li>
+            <li>
+              <a href="https://www.liberties.eu/en/about/core-team" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                Our Team
+              </a>
+            </li>
+            <li>
+              <a href="https://www.liberties.eu/en/about/our-network" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                Our Members
+              </a>
+            </li>
+            <li>
+              <a href="https://www.liberties.eu/en/vacancies" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                Vacancies
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
         
-            <div id="dropdownNavbar" class="dropdown hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
-              <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+      <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a href="javascript:void(0);" id="dropdownNavbarLink2" data-dropdown-toggle="dropdownNavbar-work" class="flex justify-center md:justify-between whitespace-nowrap items-center">Our work</a>
+    
+        <div id="dropdownNavbar-work" class="dropdown hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+          <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
+            <li>
+              <a href="https://www.liberties.eu/en/theme/tech-and-rights" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                Tech & rights
+              </a>
+            </li>
+            <li>
+              <a href="https://www.liberties.eu/en/theme/democracy-and-justice" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                Democracy & Justice
+              </a>
+            </li>
+            <li>
+              <a href="https://www.liberties.eu/en/theme/eu-watch" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                EU Watch
+              </a>
+            </li>
+            <li>
+              <a href="https://www.liberties.eu/en/theme/training-and-coaching" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                Training & Coaching
+              </a>
+            </li>
+            % if allows_login:
+              % if can_discover_courses:
                 <li>
-                  <a href="/courses" class="block border-none py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">${_('Knowledge Hub')}</a>
+                  <a href="/courses" class="block border-none py-2 px-4 hover:bg-gray-100">${_('Knowledge Hub')}</a>
                 </li>
-              </ul>
-            </div>
-          </li>
-        %endif
-      % endif
+              %endif
+            % endif
+            <li>
+              <a href="https://www.liberties.eu/en/reports-and-papers" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+                Reports & Papers
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      
+      <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a href="https://www.liberties.eu/en/get-involved" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
+          Get involved
+        </a>
+      </li>
+      <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a href="https://www.liberties.eu/en/get-involved" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
+          Get involved
+        </a>
+      </li>
+      <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a href="https://www.liberties.eu/en/stories" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
+          Stories
+        </a>
+      </li>
+      <li class="mobile-nav-item hidden-mobile nav-item nav-tab">
+        <a href="https://www.liberties.eu/en/about/contacts" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
+          Contact
+        </a>
+      </li>
     </ul>
 
-    <div class="secondary flex items-center flex-column md:flex-row justify-center w-full md:justify-end">
-      <div class="hidden md:flex items-center md:mr-6 mb-3 md:mb-0">
+    <div class="secondary flex items-center flex-column xl:flex-row justify-center w-full xl:justify-end">
+      <div class="hidden xl:flex items-center mb-3 xl:mb-0">
         % if allows_login:
           % if allow_public_account_creation:
             % if should_redirect_to_authn_mfe:
-              <a class="text-base m-0 font-roboto border-none relative bg-black text-white md:ml-4 lg:ml-0 xl:ml-8 py-1 sm:py-3 px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
+              <a class="text-base m-0 font-roboto border-none relative bg-black text-white xl:ml-8 py-1 sm:py-3 px-2 sm:px-2 xl:px-2" href="${settings.AUTHN_MICROFRONTEND_URL}/register${login_query()}">${_("Register")}</a>
             % else:
-              <a class="text-base m-0 font-roboto border-none relative bg-black text-white md:ml-4 lg:ml-0 xl:ml-8 py-1 sm:py-3 px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2" href="/register${login_query()}">${_("Register")}</a>
+              <a class="text-base m-0 font-roboto border-none relative bg-black text-white md:ml-4 lg:ml-0 xl:ml-8 py-1 sm:py-3 px-2 sm:px-2 xl:px-2" href="/register${login_query()}">${_("Register")}</a>
             % endif
           % endif
           % if should_redirect_to_authn_mfe:
             <span class="text-base font-robot text-white">/</span>
-            <a class="inline-flex items-center m-0 text-base font-roboto border-none text-primary rounded py-1 sm:py-3 px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>         
+            <a class="inline-flex items-center m-0 text-base font-roboto border-none text-primary rounded py-1 sm:py-3 px-2 sm:px-2 xl:px-2" href="${settings.AUTHN_MICROFRONTEND_URL}/login${login_query()}">${_("Sign in")}</a>         
           % else:
             <span class="text-base font-robot text-white">/</span>
-            <a class="inline-flex items-center m-0 text-base font-roboto border-none text-primary rounded py-1 sm:py-3 px-2 sm:px-2 md:px-2 lg:px-2 xl:px-2" href="/login${login_query()}">${_("Sign in")}</a>
+            <a class="inline-flex items-center m-0 text-base font-roboto border-none text-primary rounded py-1 sm:py-3 px-2 sm:px-2 xl:px-2" href="/login${login_query()}">${_("Sign in")}</a>
           % endif
         % endif
       </div>
       <div class="flex items-center">
         <a class="donation-buttons text-base m-0 font-roboto border-none shadow-inner relative
-        bg-black text-white rounded shadow-inner md:ml-4 lg:ml-0 xl:ml-8 py-1 mr-4 sm:py-3 px-4 sm:px-6 md:px-9 lg:px-6 xl:px-6" href="https://www.liberties.eu/en/subscribe" target="_blank">Subscribe</a>
-        <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded py-1 sm:py-3 px-4 sm:px-6 md:px-9 lg:px-6 xl:px-9" href="https://www.liberties.eu/en/donate" target="_blank">Donate</a>
+        bg-black text-white rounded shadow-inner md:ml-4 lg:ml-0 xl:ml-8 py-1 mr-4 sm:py-3 px-4 sm:px-6 xl:px-6" href="https://www.liberties.eu/en/subscribe" target="_blank">Subscribe</a>
+        <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-white rounded py-1 sm:py-3 px-4 sm:px-6 lg:px-6" href="https://www.liberties.eu/en/donate" target="_blank">Donate</a>
       </div>
     </div>
   </div>

@@ -1,3 +1,13 @@
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+#content {
+  padding-top: 77px;
+}
+
 .header .nav-links .nav-tab a {
   color: #969696 !important;
   opacity: 1;
@@ -1004,7 +1014,7 @@ img, video {
   text-transform: uppercase;
 }
 .footer-label, .footer-label.-terms {
-  color: rgba(255,255,255,var(--tw-text-opacity));
+  color: rgba(255,255,255,var(--tw-text-opacity))!important;
 }
 .mobile-menu {
   padding-top: 50px;
@@ -1054,6 +1064,9 @@ img, video {
   } 
   .logo {
     max-width: 120px;
+  }
+  #content {
+    padding-top: 56px;
   }
   .search-form {
     padding: 0 20px;
