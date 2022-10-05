@@ -1063,17 +1063,17 @@ img, video {
     display: flex;
     justify-content: space-between;
   }
+} 
+@media (max-width: 768px) {
+  .logo svg {
+    display: none;
+  }
   .logo {
     height: 35px;
     width: 35px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-  }
-} 
-@media (max-width: 768px) {
-  .logo svg {
-    display: none;
   }
 }
 @media (min-width: 640px) {
