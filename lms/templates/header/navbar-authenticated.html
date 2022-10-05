@@ -38,40 +38,46 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     </svg>
   </button>
 
-  <div class="hidden w-full xl:flex justify-between align-center xl:ml-5" id="mobile-menu">
+  <div class="items-center hidden xl:flex xl:order-last">
+    <a class="donation-buttons subscribe-btn text-base m-0 font-roboto border-none shadow-inner relative
+    bg-black text-white rounded shadow-inner md:ml-4 lg:ml-0 xl:ml-8 py-1 mr-4 sm:py-3 px-4 sm:px-6 xl:px-6" href="https://www.liberties.eu/en/subscribe" target="_blank">Subscribe</a>
+    <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-black rounded py-1 sm:py-3 px-4 sm:px-6 lg:px-6" href="https://www.liberties.eu/en/donate" target="_blank">Donate</a>
+  </div>
+
+  <div class="hidden w-full xl:flex items-center justify-between align-center xl:ml-5" id="mobile-menu">
     <ul class="nav-links flex flex-col p-4 xl:flex-row xl:space-x-8 xl:mt-0 xl:text-sm">
       <li class="mobile-nav-item hidden-mobile nav-item nav-tab mb-3 xl:mb-0">
-        <a href="javascript:void(0);" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex justify-center md:justify-between whitespace-nowrap items-center">About Us</a>
+        <a href="javascript:void(0);" id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex justify-center xl:justify-between whitespace-nowrap items-center">About Us</a>
     
-        <div id="dropdownNavbar" class="dropdown hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+        <div id="dropdownNavbar" class="dropdown hidden z-10 font-normal bg-white rounded divide-y divide-gray-100 shadow">
           <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
-            <li>
-              <a href="https://www.liberties.eu/en/about/organisation" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/about/organisation" target="_blank" class="block border-none my-2 mx-4">
                 About Us
               </a>
             </li>
-            <li>
-              <a href="https://www.liberties.eu/en/in-the-news" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/in-the-news" target="_blank" class="block border-none my-2 mx-4">
                 In the news
               </a>
             </li>
-            <li>
-              <a href="https://www.liberties.eu/en/about/members-of-our-board" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/about/members-of-our-board" target="_blank" class="block border-none my-2 mx-4">
                 Members of the Board
               </a>
             </li>
-            <li>
-              <a href="https://www.liberties.eu/en/about/core-team" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/about/core-team" target="_blank" class="block border-none my-2 mx-4">
                 Our Team
               </a>
             </li>
-            <li>
-              <a href="https://www.liberties.eu/en/about/our-network" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/about/our-network" target="_blank" class="block border-none my-2 mx-4">
                 Our Members
               </a>
             </li>
-            <li>
-              <a href="https://www.liberties.eu/en/vacancies" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/vacancies" target="_blank" class="block border-none my-2 mx-4">
                 Vacancies
               </a>
             </li>
@@ -80,37 +86,37 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
       </li>
         
       <li class="mobile-nav-item hidden-mobile nav-item nav-tab mb-3 xl:mb-0">
-        <a href="javascript:void(0);" id="dropdownNavbarLink2" data-dropdown-toggle="dropdownNavbar-work" class="flex justify-center md:justify-between whitespace-nowrap items-center">Our work</a>
+        <a href="javascript:void(0);" id="dropdownNavbarLink2" data-dropdown-toggle="dropdownNavbar-work" class="flex justify-center xl:justify-between whitespace-nowrap items-center">Our work</a>
     
-        <div id="dropdownNavbar-work" class="dropdown hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+        <div id="dropdownNavbar-work" class="dropdown hidden z-10 font-normal bg-white rounded divide-y divide-gray-100 shadow">
           <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
-            <li>
-              <a href="https://www.liberties.eu/en/theme/tech-and-rights" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/theme/tech-and-rights" target="_blank" class="block border-none my-2 mx-4">
                 Tech & rights
               </a>
             </li>
-            <li>
-              <a href="https://www.liberties.eu/en/theme/democracy-and-justice" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/theme/democracy-and-justice" target="_blank" class="block border-none my-2 mx-4">
                 Democracy & Justice
               </a>
             </li>
-            <li>
-              <a href="https://www.liberties.eu/en/theme/eu-watch" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/theme/eu-watch" target="_blank" class="block border-none my-2 mx-4">
                 EU Watch
               </a>
             </li>
-            <li>
-              <a href="https://www.liberties.eu/en/theme/training-and-coaching" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/theme/training-and-coaching" target="_blank" class="block border-none my-2 mx-4">
                 Training & Coaching
               </a>
             </li>
             % if show_dashboard_tabs:
-              <li>
-                <a href="/courses" class="block border-none py-2 px-4 hover:bg-gray-100">${_('Knowledge Hub')}</a>
+              <li class="flex py-2 px-2">
+                <a href="https://knowledgehub.matoffo.com" class="block border-none my-2 mx-4">${_('Knowledge Hub')}</a>
               </li>
             % endif
-            <li>
-              <a href="https://www.liberties.eu/en/reports-and-papers" target="_blank" class="block border-none py-2 px-4 hover:bg-gray-100">
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/reports-and-papers" target="_blank" class="block border-none my-2 mx-4">
                 Reports & Papers
               </a>
             </li>
@@ -123,7 +129,6 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
           Get involved
         </a>
       </li>
-
       <li class="mobile-nav-item hidden-mobile nav-item nav-tab mb-3 xl:mb-0">
         <a href="https://www.liberties.eu/en/stories" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
           Stories
@@ -145,5 +150,13 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
         </a>
       </li>
     </ul>
+
+    <div class="secondary flex items-center flex-column xl:hidden justify-center w-full">
+      <div class="flex items-center">
+        <a class="donation-buttons subscribe-btn text-base m-0 font-roboto border-none shadow-inner relative
+        bg-black text-white rounded shadow-inner md:ml-4 lg:ml-0 xl:ml-8 py-1 mr-4 sm:py-3 px-4 sm:px-6 xl:px-6" href="https://www.liberties.eu/en/subscribe" target="_blank">Subscribe</a>
+        <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-black rounded py-1 sm:py-3 px-4 sm:px-6 lg:px-6" href="https://www.liberties.eu/en/donate" target="_blank">Donate</a>
+      </div>
+    </div>
   </div>
 </div>

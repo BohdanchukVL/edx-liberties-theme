@@ -1,6 +1,6 @@
 ## mako
 
-<%page expression_filter="h" args="online_help_token, use_cookie_banner=True"/>
+<%page expression_filter="h" args="online_help_token, use_cookie_banner=False"/>
 
 <%namespace name='static' file='../static_content.html'/>
 <%namespace file='../main.html' import="login_query"/>
@@ -50,9 +50,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
             props={}
         )}
     % endif
-    <div class="main-detached-nav flex flex-row justify-between items-center sm:h-auto px-6 font-roboto font-bold uppercase bg-black sm:pt-2 lg:pt-0 sm:pb-2 lg:pb-0">
-        
-        
+    <div class="main-detached-nav flex flex-row justify-between items-center sm:h-auto px-6 font-roboto font-bold uppercase bg-black">  
         % if user.is_authenticated:
             <%include file="navbar-authenticated.html" args="online_help_token=online_help_token"/>
         % else:

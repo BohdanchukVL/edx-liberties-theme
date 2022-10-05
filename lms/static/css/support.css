@@ -1,4 +1,4 @@
-header {
+header.header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -6,6 +6,7 @@ header {
 }
 #content {
   padding-top: 77px;
+  min-height: 55vh;
 }
 
 .header .nav-links .nav-tab a {
@@ -17,6 +18,10 @@ header {
   font-weight: bold !important;
   font-size: initial;
   padding-top: 3px;
+}
+.login-register-content {
+  margin-top: 0;
+  padding-top: 20px;
 }
 .container::after {
   display: none;
@@ -352,9 +357,6 @@ footer a:hover {
   font-family: 'Roboto Condensed';
   color: #000;
 }
-.header .nav-links .nav-tab .dropdown a:hover {
-  border: none!important;
-}
 
 .modal .inner-wrapper form .submit input[type="submit"], .leanModal_box .inner-wrapper form .submit input[type="submit"], .entitlement-unenrollment-modal .inner-wrapper form .submit input[type="submit"], .entitlement-unenrollment-modal .entitlement-unenrollment-modal-inner-wrapper form .submit input[type="submit"] {
   background-image: none;
@@ -384,6 +386,12 @@ footer a:hover {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.stories-header-image {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-height: 180px;
+}
 .content h2, .header-courses {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -412,6 +420,9 @@ footer a:hover {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+  .stories-header-image {
+    max-height: 400px;
+  }
   .content p, .content li {
     font-size: 1.125rem;
     line-height: 2rem;
@@ -438,6 +449,9 @@ footer a:hover {
   .section-title {
     font-size: 3rem;
     line-height: 1;
+  }
+  .stories-header-image {
+    max-height: 580px;
   }
   .content h1, .course-info h1 {
     font-size: 3.75rem;
@@ -1027,16 +1041,19 @@ img, video {
   transition: .25s;
 }
 .user-dropdown:hover {
+  background-color: transparent!important;
+  box-shadow: none!important;
   border: none;
-  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
-  box-shadow: var(--tw-ring-offset-shadow),var(--tw-ring-shadow),0 0 transparent;
-  box-shadow: var(--tw-ring-offset-shadow),var(--tw-ring-shadow),var(--tw-shadow,0 0 transparent);
-  --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(236,87,19,var(--tw-ring-opacity));
-  --tw-ring-opacity: 0.6;
   outline: none;
   z-index: 10;
+}
+.logo {
+  height: 60px;
+  background-size: 0;
+}
+.logo svg {
+  height: 100%;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .footer-contacts {
@@ -1044,6 +1061,16 @@ img, video {
     padding-top: 6rem;
     display: flex;
     justify-content: space-between;
+  }
+  .logo {
+    height: 35px;
+    width: 35px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .logo svg {
+    display: none;
   }
 } 
 @media (min-width: 640px) {
@@ -1127,4 +1154,13 @@ footer .container>div {
   width: 100%;
   border: none;
   background: transparent;
+}
+.subscribe-btn {
+  --tw-shadow: inset 0px 0px 0px 1px #08c6c5;
+}
+body .subscribe-btn:hover, .subscribe-btn:active, .subscribe-btn:focus {
+  --tw-shadow: inset 0px 0px 0px 1px #08c6c5;
+  background-color: #08c6c5!important;
+  color: #000!important;
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) #00ffff57;
 }
