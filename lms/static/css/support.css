@@ -1043,6 +1043,7 @@ img, video {
 .user-dropdown:hover {
   background-color: transparent!important;
   box-shadow: none!important;
+  background-image: none!important;
   border: none;
   outline: none;
   z-index: 10;
@@ -1069,10 +1070,12 @@ img, video {
     background-position: center;
     background-repeat: no-repeat;
   }
+} 
+@media (max-width: 768px) {
   .logo svg {
     display: none;
   }
-} 
+}
 @media (min-width: 640px) {
   .footer-contacts {
     padding-top: 3rem;
