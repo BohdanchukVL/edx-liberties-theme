@@ -57,32 +57,32 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
         <div id="dropdownNavbar" class="dropdown hidden z-10 font-normal bg-white rounded divide-y divide-gray-100 shadow">
           <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/about/organisation" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/about/organisation" target="_self" class="block border-none my-2 mx-4">
                 About Us
               </a>
             </li>
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/in-the-news" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/in-the-news" target="_self" class="block border-none my-2 mx-4">
                 In the news
               </a>
             </li>
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/about/members-of-our-board" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/about/members-of-our-board" target="_self" class="block border-none my-2 mx-4">
                 Members of the Board
               </a>
             </li>
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/about/core-team" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/about/core-team" target="_self" class="block border-none my-2 mx-4">
                 Our Team
               </a>
             </li>
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/about/our-network" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/about/our-network" target="_self" class="block border-none my-2 mx-4">
                 Our Members
               </a>
             </li>
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/vacancies" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/vacancies" target="_self" class="block border-none my-2 mx-4">
                 Vacancies
               </a>
             </li>
@@ -96,34 +96,30 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
         <div id="dropdownNavbar-work" class="dropdown hidden z-10 font-normal bg-white rounded divide-y divide-gray-100 shadow">
           <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/theme/tech-and-rights" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/theme/tech-and-rights" target="_self" class="block border-none my-2 mx-4">
                 Tech & rights
               </a>
             </li>
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/theme/democracy-and-justice" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/theme/democracy-and-justice" target="_self" class="block border-none my-2 mx-4">
                 Democracy & Justice
               </a>
             </li>
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/theme/eu-watch" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/theme/eu-watch" target="_self" class="block border-none my-2 mx-4">
                 EU Watch
               </a>
             </li>
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/theme/training-and-coaching" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://www.liberties.eu/en/theme/training-and-coaching" target="_self" class="block border-none my-2 mx-4">
                 Training & Coaching
               </a>
             </li>
-            % if allows_login:
-              % if can_discover_courses:
-                <li class="flex py-2 px-2">
-                  <a href="https://knowledgehub.matoffo.com" class="block border-none my-2 mx-4">${_('Knowledge Hub')}</a>
-                </li>
-              %endif
-            % endif
             <li class="flex py-2 px-2">
-              <a href="https://www.liberties.eu/en/reports-and-papers" target="_blank" class="block border-none my-2 mx-4">
+              <a href="https://knowledgehub.liberties.eu" class="block border-none my-2 mx-4">${_('Knowledge Hub')}</a>
+            </li>
+            <li class="flex py-2 px-2">
+              <a href="https://www.liberties.eu/en/reports-and-papers" target="_self" class="block border-none my-2 mx-4">
                 Reports & Papers
               </a>
             </li>
@@ -132,22 +128,22 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
       </li>
       
       <li class="mobile-nav-item hidden-mobile nav-item nav-tab mb-3 xl:mb-0">
-        <a href="https://www.liberties.eu/en/get-involved" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
+        <a href="https://www.liberties.eu/en/get-involved" target="_self" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
           Get involved
         </a>
       </li>
       <li class="mobile-nav-item hidden-mobile nav-item nav-tab mb-3 xl:mb-0">
-        <a href="https://www.liberties.eu/en/stories" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
+        <a href="https://www.liberties.eu/en/stories" target="_self" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
           Stories
         </a>
       </li>
       <li class="mobile-nav-item hidden-mobile nav-item nav-tab mb-3 xl:mb-0">
-        <a href="https://www.liberties.eu/en/about/contacts" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
+        <a href="https://www.liberties.eu/en/about/contacts" target="_self" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
           Contact
         </a>
       </li>
       <li class="mobile-nav-item hidden-mobile nav-item nav-tab mb-3 xl:mb-0">
-        <a href="https://www.liberties.eu/en/search" target="_blank" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
+        <a href="https://www.liberties.eu/en/search" target="_self" class="flex justify-center whitespace-nowrap xl:justify-between items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M11.455 7.364a4.09 4.09 0 11-8.182 0 4.09 4.09 0 018.182 0zm-.875 4.74a5.727 5.727 0 111.213-1.108l4.306 3.946a.818.818 0 01-1.106 1.207l-4.413-4.046z" fill="#969696"></path>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -179,8 +175,8 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
       </div>
       <div class="flex items-center">
         <a class="donation-buttons subscribe-btn text-base m-0 font-roboto border-none shadow-inner relative
-        bg-black text-white rounded shadow-inner md:ml-4 lg:ml-0 xl:ml-8 py-1 mr-4 sm:py-3 px-4 sm:px-6 xl:px-6" href="https://www.liberties.eu/en/subscribe" target="_blank">Subscribe</a>
-        <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-black rounded py-1 sm:py-3 px-4 sm:px-6 lg:px-6" href="https://www.liberties.eu/en/donate" target="_blank">Donate</a>
+        bg-black text-white rounded shadow-inner md:ml-4 lg:ml-0 xl:ml-8 py-1 mr-4 sm:py-3 px-4 sm:px-6 xl:px-6" href="https://www.liberties.eu/en/subscribe" target="_self">Subscribe</a>
+        <a class="inline-flex items-center m-0 donation-buttons text-base font-roboto border-none bg-orange text-black rounded py-1 sm:py-3 px-4 sm:px-6 lg:px-6" href="https://www.liberties.eu/en/donate" target="_self">Donate</a>
       </div>
     </div>
   </div>

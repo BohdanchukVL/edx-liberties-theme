@@ -17,7 +17,7 @@ from lms.djangoapps.branding import api as branding_api
 
     <div>
       % if enterprise_customer_link:
-      <a class="flex items-center" href="${settings.ENTERPRISE_LEARNER_PORTAL_BASE_URL}/${enterprise_customer_link.get('slug')}">
+      <a class="flex items-center" href="https://knowledgehub.liberties.eu">
         <div class="logo">
           <svg width="219" height="60" viewBox="0 0 219 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="29" width="212" height="30" fill="#EC5713"/>
@@ -48,7 +48,7 @@ from lms.djangoapps.branding import api as branding_api
         % endif
       </a>
       % else:
-      <a class="flex items-center" href="${branding_api.get_home_url()}">
+      <a class="flex items-center" href="https://knowledgehub.liberties.eu">
         <%block name="navigation_logo">
           <div class="logo" style="background-image: url(${static.url('assets/img/logo-m.png')})">
             <svg width="219" height="60" viewBox="0 0 219 60" fill="none" xmlns="http://www.w3.org/2000/svg">
