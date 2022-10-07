@@ -5,7 +5,7 @@ header.header {
   z-index: 100;
 }
 #content {
-  padding-top: 77px;
+  padding-top: 92px;
   min-height: 55vh;
 }
 
@@ -1056,6 +1056,16 @@ img, video {
   height: 100%;
   width: 100%;
 }
+.footer-label, .footer-label.-terms {
+  color: rgba(255,255,255,var(--tw-text-opacity));
+}
+.footer-label {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  --tw-text-opacity: 1;
+  --tw-text-opacity: 0.7;
+  font-style: normal;
+}
 @media (min-width: 768px) {
   .footer-contacts {
     padding-bottom: 2.5rem;
@@ -1096,7 +1106,7 @@ img, video {
     max-width: 120px;
   }
   #content {
-    padding-top: 56px;
+    padding-top: 67px;
   }
   .search-form {
     padding: 0 20px;
