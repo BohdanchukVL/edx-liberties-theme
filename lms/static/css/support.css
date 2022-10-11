@@ -17,7 +17,8 @@ header.header {
   font-family: 'Roboto Condensed';
   font-weight: bold !important;
   font-size: initial;
-  padding-top: 3px;
+  padding-top: 9px;
+  padding-bottom: 3px;
 }
 .login-register-content {
   margin-top: 0;
@@ -1065,6 +1066,35 @@ img, video {
   --tw-text-opacity: 1;
   --tw-text-opacity: 0.7;
   font-style: normal;
+}
+.cc-grower {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  bottom: 0;
+}
+.dropdown-hoverable {
+  position: relative;
+}
+.dropdown-hoverable .dropdown {
+  top: 53px!important;
+  min-width: 200px;
+  width: max-content;
+  transform: none!important;
+}
+.dropdown-hoverable:hover .dropdown {
+  display: block!important;
+}
+.dropdown-hoverable .dropdown:after {
+  content: "";
+  transform: translateX(50%);
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #fff;
 }
 @media (min-width: 768px) {
   .footer-contacts {
