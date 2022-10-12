@@ -28,7 +28,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
 <div class="flex flex-wrap w-full xl:flex-nowrap justify-between items-center mx-auto">
   <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
 
-  <div class="ml-auto items-center flex xl:order-last">
+  <div class="ml-auto items-center nav-links dropdown-hoverable flex xl:order-last">
     <%include file="user_dropdown.html"/>
   </div>
   
@@ -51,32 +51,32 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     
         <div id="dropdownNavbar" class="dropdown hidden z-10 font-normal bg-white rounded divide-y divide-gray-100 shadow">
           <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/about/organisation" target="_self" class="block border-none my-2 mx-4">
                 About Us
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/in-the-news" target="_self" class="block border-none my-2 mx-4">
                 In the news
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/about/members-of-our-board" target="_self" class="block border-none my-2 mx-4">
                 Members of the Board
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/about/core-team" target="_self" class="block border-none my-2 mx-4">
                 Our Team
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/about/our-network" target="_self" class="block border-none my-2 mx-4">
                 Our Members
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/vacancies" target="_self" class="block border-none my-2 mx-4">
                 Vacancies
               </a>
@@ -90,30 +90,30 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     
         <div id="dropdownNavbar-work" class="dropdown hidden z-10 font-normal bg-white rounded divide-y divide-gray-100 shadow">
           <ul class="py-1 text-sm text-gray-700" aria-labelledby="dropdownLargeButton">
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/theme/tech-and-rights" target="_self" class="block border-none my-2 mx-4">
                 Tech & rights
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/theme/democracy-and-justice" target="_self" class="block border-none my-2 mx-4">
                 Democracy & Justice
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/theme/eu-watch" target="_self" class="block border-none my-2 mx-4">
                 EU Watch
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/theme/training-and-coaching" target="_self" class="block border-none my-2 mx-4">
                 Training & Coaching
               </a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://knowledgehub.liberties.eu" class="block border-none my-2 mx-4">${_('Knowledge Hub')}</a>
             </li>
-            <li class="flex py-2 px-2">
+            <li class="flex px-2">
               <a href="https://www.liberties.eu/en/reports-and-papers" target="_self" class="block border-none my-2 mx-4">
                 Reports & Papers
               </a>

@@ -1037,17 +1037,23 @@ img, video {
 }
 .user-dropdown {
   border: none;
-  box-shadow: none;
+  box-shadow: none!important;
   height: fit-content;
   transition: .25s;
 }
 .user-dropdown:hover {
   background-color: transparent!important;
-  box-shadow: none!important;
+  box-shadow: none;
   background-image: none!important;
   border: none;
   outline: none;
   z-index: 10;
+}
+#dropdownAvatar {
+  left: -135px!important;
+}
+#dropdownAvatar::after {
+  right: 45px;
 }
 .logo {
   height: 60px;
