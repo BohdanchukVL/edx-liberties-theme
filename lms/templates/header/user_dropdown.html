@@ -38,35 +38,35 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
 </button>
 
 <!-- Dropdown menu -->
-<div class="hidden nav-tab dropdown z-10 ml-3 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownAvatar" class="hidden absolute nav-tab dropdown z-10 ml-3 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
         % if resume_block:
-            <li class="py-2 px-4">
+            <li class="py-2 px-4 d-flex">
                 <a href="${resume_block}" class="block">${_("Resume your last course")}</a>
             </li>
         % endif
         % if not enterprise_customer_portal:
-            <li class="py-2 px-4">
+            <li class="py-2 px-4 d-flex">
                 <a href="${reverse('dashboard')}" class="block">${_("Dashboard")}</a>
             </li>
         % else:
-            <li class="py-2 px-4">
+            <li class="py-2 px-4 d-flex">
                 <a href="${settings.ENTERPRISE_LEARNER_PORTAL_BASE_URL}/${enterprise_customer_portal.get('slug')}" class="block">${_("Dashboard")}</a>
             </li>
         % endif
-        <li class="py-2 px-4">
+        <li class="py-2 px-4 d-flex">
             <a href="${reverse('learner_profile', kwargs={'username': username})}" class="block">${_("Profile")}</a>
         </li>
-        <li class="py-2 px-4">
+        <li class="py-2 px-4 d-flex">
             <a href="${reverse('account_settings')}" class="block">${_("Account")}</a>
         </li>
         % if should_show_order_history:
-            <li class="py-2 px-4">
+            <li class="py-2 px-4 d-flex">
                 <a href="${settings.ORDER_HISTORY_MICROFRONTEND_URL}" class="block">${_("Order History")}</a>
             </li>
         % endif
     </ul>
-    <div class="py-1">
+    <div class="py-2 px-4 d-flex">
         <a href="${reverse('logout')}" class="block">${_("Sign Out")}</a>
     </div>
 </div>

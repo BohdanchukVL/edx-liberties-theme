@@ -1152,6 +1152,9 @@ h1, h2, .home>header .title>.heading-group p, section.outside-app h1, h3, h4, h5
   font-family: 'Roboto Condensed';
   text-align: inherit;
 }
+.header .dropdown ul a {
+  color: #000!important;
+}
 /**COOKIE MODAL**/
 #manage-cookies {
   position: fixed;
