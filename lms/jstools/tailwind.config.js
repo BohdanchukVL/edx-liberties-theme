@@ -8,6 +8,9 @@ module.exports = {
     enabled: false, //true for production build
     content: ['../**/templates/*.html', '../**/templates/**/*.html']
   },
+  plugins: [
+    require('flowbite/plugin')
+  ],
   theme: {
     screens: {
       xs: '480px',
@@ -840,6 +843,5 @@ module.exports = {
     width: ['responsive'],
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus']
-  },
-  plugins: []
+  }
 };

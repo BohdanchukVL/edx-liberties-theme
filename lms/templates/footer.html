@@ -10,122 +10,179 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
     <% icp_license_info=getattr(settings, 'ICP_LICENSE_INFO' , {})%>
       <%namespace name='static' file='static_content.html' />
 
-<div id="manage-cookies">
-  <a href="#" class="close"></a>
+<div id="init-cookies">
+  <div class="close"></div>
   <div id="target-inner">
-    <div class="bg-white rounded p-12 sm:mx-auto max-w-2xl">
-      <div class="grid gap-4">
-        <div class="flex space-x-6 items-center text-orange">
-          <h3 class="flex-auto uppercase font-bold">Necessary</h3>
-          <button
-            type="button"
-            class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
-          >
-            <span class="hoverable-highlight link-btn--light">details</span>
+    <div class="bg-white rounded p-12 m-1 sm:my-12 sm:mx-auto max-w-2xl">
+      <div>
+        <h1 class="text-4xl font-bold">Privacy Preferences</h1>
+        <p class="my-8">
+          We use cookies to enhance the functionality of our website, to personalise content, to provide social
+          media features and to understand incoming traffic. You can revise and customise your cookie settings
+        </p>
+        <div class="grid grid-cols-2 gap-6">
+          <button id="cookie-popup-acceptbasic" type="button"
+            class="bg-gray-200 border-0 text-black uppercase font-bold rounded md:px-8 sm:px-6 py-3">
+            Accept Basic Cookie Settings
           </button>
-          <div>
-            <div
-              class="cookie-toggle flex content-center justify-center rounded-full bg-green p-1 w-10"
-            >
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                <path
-                  d="M10.5 5.833V3.5a3.5 3.5 0 00-7 0v2.333H1.75V14h10.5V5.833H10.5zm-5.833 0V3.5A2.336 2.336 0 017 1.167 2.336 2.336 0 019.333 3.5v2.333H4.667z"
-                  fill="#fff"
-                ></path>
-              </svg>
-            </div>
-          </div>
+          <button id="cookie-popup-acceptall" type="button"
+            class="bg-orange border-0 text-white uppercase font-bold rounded md:px-8 sm:px-6 py-3">
+            Accept All Cookies
+          </button>
         </div>
-        <div class="flex space-x-6 items-center">
-          <h3 class="flex-auto uppercase font-bold">Preferences</h3>
-          <button
-            type="button"
-            class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
-          >
-            <span class="hoverable-highlight link-btn--light">details</span>
+        <div class="text-center mt-10">
+          <button id="cookie-popup-settings" type="button"
+            class="link-btn rounded-none border-b-2 text-base font-bold hover:bg-black">
+            Manage cookies
           </button>
-          <label>
-            <input type="checkbox" class="hidden cookie-toggle-input" />
-            <div
-              class="cookie-toggle flex content-start rounded-full bg-gray-300 p-1 w-10"
-            >
-              <div
-                class="dot bg-white w-4 h-4 rounded-full cookie-toggle-dot"
-              ></div>
-            </div>
-          </label>
-        </div>
-        <div class="flex space-x-6 items-center">
-          <h3 class="flex-auto uppercase font-bold">Performance</h3>
-          <button
-            type="button"
-            class="text-sm text-black bg-transparent capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static"
-          >
-            <span class="hoverable-highlight link-btn--light">details</span>
-          </button>
-          <label>
-            <input type="checkbox" class="hidden cookie-toggle-input" />
-            <div
-              class="cookie-toggle flex content-start rounded-full bg-gray-300 p-1 w-10"
-            >
-              <div
-                class="dot bg-white w-4 h-4 rounded-full cookie-toggle-dot"
-              ></div>
-            </div>
-          </label>
         </div>
       </div>
-      <div class="my-6 border-0 border-t border-b border-solid border-black">
-        <div>
-          <h3 class="font-bold">Details of Necessary cookies</h3>
-          <div class="my-2">
-            Necessary cookies help make a website usable by enabling basic
-            functions like page navigation and storing session information.
-            Session cookies make it possible to navigate through the website
-            smoothly. The website cannot function properly without these
-            cookies, thus cannot be switched off in our systems. You can set
-            your browser to block or alert you about these cookies, but some
-            parts of the site will not work in this case. These cookies do not
-            store any personally identifiable information.
-          </div>
-          <div class="divide-y divide-solid divide-gray-300 my-4">
-            <div class="py-4">
-              <div class="grid grid-cols-3 gap-2">
-                <div>
-                  <div class="text-xs text-black text-opacity-40">
-                    Cookie Name
-                  </div>
-                  name
-                </div>
-                <div>
-                  <div class="text-xs text-black text-opacity-40">
-                    Provider Name
-                  </div>
-                  prodvider.name
-                </div>
-                <div>
-                  <div class="text-xs text-black text-opacity-40">Expiry</div>
-                  Session
-                </div>
-              </div>
-              <div class="text-xs text-black text-opacity-40 mt-2">Purpose</div>
-              <div class="text-sm text-black text-opacity-80">
-                Starts a user session.
-              </div>
+    </div>
+  </div>
+</div>
+
+<div id="manage-cookies">
+  <div class="close"></div>
+  <div id="target-inner">
+    <div class="bg-white rounded p-8 sm:p-12 sm:mx-auto max-w-2xl">
+      <div class="mb-8">
+        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"
+          data-tabs-toggle="#manageCookieTab" role="tablist">
+          <li class="mr-6" role="presentation">
+            <button
+              class="text-xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange"
+              id="manage-tab" data-tabs-target="#manage" type="button" role="tab" aria-controls="manage"
+              aria-selected="false">
+              <span class="hoverable-highlight">Manage Cookies</span>
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              class="text-xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange"
+              id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about"
+              aria-selected="false">
+              <span class="hoverable-highlight">About Cookies</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div id="manageCookieTab">
+        <div class="hidden" id="manage" role="tabpanel" aria-labelledby="manage-tab">
+          <div class="grid gap-4">
+            <div class="flex space-x-6 items-center text-orange">
+              <h3 class="flex-auto uppercase font-bold">Necessary</h3>
+              <button type="button"
+                class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static">
+                <span class="hoverable-highlight ">details</span>
+              </button>
               <div>
-                <div class="text-xs text-black text-opacity-40 mt-2">
-                  Provider Domain
+                <div class="cookie-toggle flex content-center justify-center rounded-full bg-green p-1 w-10">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                    <path
+                      d="M10.5 5.833V3.5a3.5 3.5 0 00-7 0v2.333H1.75V14h10.5V5.833H10.5zm-5.833 0V3.5A2.336 2.336 0 017 1.167 2.336 2.336 0 019.333 3.5v2.333H4.667z"
+                      fill="#fff"></path>
+                  </svg>
                 </div>
-                <div class="text-sm text-black text-opacity-80">
-                  cookies.domain
+              </div>
+            </div>
+            <div class="flex space-x-6 items-center">
+              <h3 class="flex-auto uppercase font-bold">Preferences</h3>
+              <button type="button"
+                class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static">
+                <span class="hoverable-highlight ">details</span>
+              </button>
+              <label>
+                <input id="preferenceCheck" type="checkbox" class="hidden cookie-toggle-input">
+                <div class="cookie-toggle flex content-start rounded-full bg-gray-300 p-1 w-10">
+                  <div class="dot bg-white w-4 h-4 rounded-full cookie-toggle-dot"></div>
+                </div>
+              </label>
+            </div>
+            <div class="flex space-x-6 items-center">
+              <h3 class="flex-auto uppercase font-bold">Performance</h3>
+              <button type="button"
+                class="text-sm text-black bg-transparent capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static">
+                <span class="hoverable-highlight">details</span>
+              </button>
+              <label>
+                <input id="performanceCheck" type="checkbox" class="hidden cookie-toggle-input">
+                <div class="cookie-toggle flex content-start rounded-full bg-gray-300 p-1 w-10">
+                  <div class="dot bg-white w-4 h-4 rounded-full cookie-toggle-dot"></div>
+                </div>
+              </label>
+            </div>
+          </div>
+          <div class="my-6 py-4 border-0 border-t border-b border-solid border-black">
+            <div>
+              <h3 class="font-bold">Details of Necessary cookies</h3>
+              <div class="my-2">
+                Necessary cookies help make a website usable by enabling basic
+                functions like page navigation and storing session information.
+                Session cookies make it possible to navigate through the website
+                smoothly. The website cannot function properly without these
+                cookies, thus cannot be switched off in our systems. You can set
+                your browser to block or alert you about these cookies, but some
+                parts of the site will not work in this case. These cookies do not
+                store any personally identifiable information.
+              </div>
+              <div class="divide-y divide-solid divide-gray-300 my-4">
+                <div class="py-4">
+                  <div class="grid grid-cols-3 gap-2">
+                    <div>
+                      <div class="text-xs text-black text-opacity-40">
+                        Cookie Name
+                      </div>
+                      cookie_setting
+                    </div>
+                    <div>
+                      <div class="text-xs text-black text-opacity-40">
+                        Provider Name
+                      </div>
+                      Liberties.EU
+                    </div>
+                    <div>
+                      <div class="text-xs text-black text-opacity-40">Expiry</div>
+                      01/01/2037
+                    </div>
+                  </div>
+                  <div class="text-xs text-black text-opacity-40 mt-2">Purpose</div>
+                  <div class="text-sm text-black text-opacity-80">
+                    This makes sure the user doesn’t see the cookie banner twice.
+                  </div>
+                  <div>
+                    <div class="text-xs text-black text-opacity-40 mt-2">
+                      Provider Domain
+                    </div>
+                    <div class="text-sm text-black text-opacity-80">
+                      www.knowledgehub.liberties.eu
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="hidden" id="about" role="tabpanel" aria-labelledby="about-tab">
+          <div class="my-6">
+            <p>Cookies are small text files that can be used by websites to make a user's experience more efficient.
+              This site uses different types of cookies. The law states that we can store them on your device under
+              a number of conditions, e.g., if you consent to it, or if we have legitimate interest in it (such as
+              the smooth operation of the website).
+            </p>
+            <p class="mt-0">You can change or withdraw your consent from the <strong>Cookie Settings</strong> on our
+              website at any time. Your consent applies to the following domain: <a class="text-gray-900"
+                href="https://www.liberties.eu/" rel="nofollow">www.liberties.eu</a>
+            </p>
+            <p class="mt-0">Learn more about who we are, how you can contact us and how we process personal data in
+              our <strong><a class="text-gray-900" href="https://www.liberties.eu/en/info/privacy-policy"
+                  rel="nofollow">Privacy Policy</a>.</strong>
+            </p>
+          </div>
+        </div>
       </div>
-      <div class="text-center">
-        <a href="#" class="inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center bg-orange donation-buttons">OK</a>
+      <div class="pt-6 pb-4 sticky bottom-0 bg-white text-center">
+        <button id="confirm-cookie-manage"
+          class="inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center bg-orange donation-buttons">OK</button>
       </div>
     </div>
   </div>
@@ -134,7 +191,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
 <footer class="bg-black" aria-labelledby="footerHeading">
   <div class="container">
     <div class="footer-contacts">
-      <div class="flex flex-column w-50 md:w-auto md:flex-row md:items-center md:space-x-5 mb-6 md:mb-0">
+      <div class="flex w-1/2 md:w-auto justify-start items-start flex-column md:flex-row space-x-0 md:space-x-5 mb-6 md:mb-0">
         <a href="https://www.liberties.eu/en/about/privacy-policy" target="_self" class="footer-label -terms">Privacy Policy</a> 
         <a href="https://www.liberties.eu/en/about/terms-of-use" target="_self" class="footer-label -terms">Terms Of Use</a> 
         <a href="#manage-cookies" class="footer-label -terms">Manage Cookies</a>
