@@ -1115,6 +1115,9 @@ img, video {
   }
 } 
 @media (max-width: 768px) {
+  #manage-cookies #target-inner, #init-cookies #target-inner {
+    max-height: 90vh;
+  }
   #target-inner {
     width: 95%;
   }

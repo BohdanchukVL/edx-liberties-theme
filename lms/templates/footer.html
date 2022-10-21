@@ -13,7 +13,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
 <div id="init-cookies">
   <div class="close"></div>
   <div id="target-inner">
-    <div class="bg-white rounded p-12 m-1 sm:my-12 sm:mx-auto max-w-2xl">
+    <div class="bg-white rounded p-8 md:p-12 m-1 sm:my-12 sm:mx-auto max-w-2xl">
       <div>
         <h1 class="text-4xl font-bold">Privacy Preferences</h1>
         <p class="my-8">
@@ -26,14 +26,14 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
             Accept Basic Cookie Settings
           </button>
           <button id="cookie-popup-acceptall" type="button"
-            class="bg-orange border-0 text-white uppercase font-bold rounded md:px-8 sm:px-6 py-3">
+            class="bg-orange-500 border-0 text-white uppercase font-bold rounded md:px-8 sm:px-6 py-3">
             Accept All Cookies
           </button>
         </div>
         <div class="text-center mt-10">
           <button id="cookie-popup-settings" type="button"
             class="link-btn rounded-none border-b-2 text-base font-bold hover:bg-black">
-            Manage cookies
+            <span class="text-sm">Manage cookies</span>
           </button>
         </div>
       </div>
@@ -50,7 +50,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
           data-tabs-toggle="#manageCookieTab" role="tablist">
           <li class="mr-6" role="presentation">
             <button
-              class="text-xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange"
+              class="text-base md:text-2xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange-500"
               id="manage-tab" data-tabs-target="#manage" type="button" role="tab" aria-controls="manage"
               aria-selected="false">
               <span class="hoverable-highlight">Manage Cookies</span>
@@ -58,7 +58,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
           </li>
           <li class="mr-2" role="presentation">
             <button
-              class="text-xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange"
+              class="text-base md:text-2xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange-500"
               id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about"
               aria-selected="false">
               <span class="hoverable-highlight">About Cookies</span>
@@ -72,10 +72,14 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
             <div class="flex space-x-6 items-center text-orange">
               <h3 class="flex-auto uppercase font-bold">Necessary</h3>
               <button type="button"
-                class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static">
+                class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
                 <span class="hoverable-highlight ">details</span>
               </button>
               <div>
+                <div style="background-color:#56d280;" class="cookie-toggle flex content-center justify-center rounded-full bg-green p-1 w-10">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path data-v-422640db="" d="M10.5 5.833V3.5a3.5 3.5 0 00-7 0v2.333H1.75V14h10.5V5.833H10.5zm-5.833 0V3.5A2.336 2.336 0 017 1.167 2.336 2.336 0 019.333 3.5v2.333H4.667z" fill="#fff"></path>
+                  </svg>
+                </div>
                 <div class="cookie-toggle flex content-center justify-center rounded-full bg-green p-1 w-10">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path
@@ -88,7 +92,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
             <div class="flex space-x-6 items-center">
               <h3 class="flex-auto uppercase font-bold">Preferences</h3>
               <button type="button"
-                class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static">
+                class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
                 <span class="hoverable-highlight ">details</span>
               </button>
               <label>
@@ -101,7 +105,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
             <div class="flex space-x-6 items-center">
               <h3 class="flex-auto uppercase font-bold">Performance</h3>
               <button type="button"
-                class="text-sm text-black bg-transparent capitalize border-0 border-b-2 border-solid border-orange hover:border-transparent hoverable-static">
+                class="text-sm text-black bg-transparent capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
                 <span class="hoverable-highlight">details</span>
               </button>
               <label>
@@ -182,7 +186,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
       </div>
       <div class="pt-6 pb-4 sticky bottom-0 bg-white text-center">
         <button id="confirm-cookie-manage"
-          class="inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center bg-orange donation-buttons">OK</button>
+          class="inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center bg-orange-500 donation-buttons">OK</button>
       </div>
     </div>
   </div>
@@ -194,7 +198,7 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
       <div class="flex w-1/2 md:w-auto justify-start items-start flex-column md:flex-row space-x-0 md:space-x-5 mb-6 md:mb-0">
         <a href="https://www.liberties.eu/en/about/privacy-policy" target="_self" class="footer-label -terms">Privacy Policy</a> 
         <a href="https://www.liberties.eu/en/about/terms-of-use" target="_self" class="footer-label -terms">Terms Of Use</a> 
-        <a href="#manage-cookies" class="footer-label -terms">Manage Cookies</a>
+        <a id="set-manage-cookie" href="javascript:;" class="footer-label -terms">Manage Cookies</a>
       </div> 
       <div class="sm:flex xl:flex-row w-50 md:w-auto flex-col xl:items-center xl:space-x-6 space-y-4 xl:space-y-0">
         <div class="flex items-center space-x-4">

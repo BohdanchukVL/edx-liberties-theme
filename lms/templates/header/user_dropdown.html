@@ -29,7 +29,7 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
 %>
 
 
-<button id="dropdownUserAvatarButton" class="user-dropdown flex mx-3 items-center justify-center text-sm bg-gray-800 rounded-full md:mr-0" type="button">
+<button id="dropdownUserAvatarButton" class="user-dropdown flex mx-3 items-center justify-center text-sm rounded-full md:mr-0" type="button">
     <span class="sr-only">Open user menu</span>
     <svg width="62" height="52" viewBox="0 0 62 52" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path fill-rule="evenodd" clip-rule="evenodd" d="M29.1029 30.136V28.0677C29.5682 27.837 30.8992 26.2528 31.0387 25.0149C31.4048 24.987 31.9799 24.6509 32.1494 23.3241C32.2404 22.6116 31.8785 22.2114 31.6591 22.0852C31.6591 22.0852 32.2053 21.048 32.2053 19.7956C32.2053 17.2847 31.2197 15.142 29.1029 15.142C29.1029 15.142 28.3676 13.5908 26.0004 13.5908C21.6136 13.5908 19.7956 16.4047 19.7956 19.7956C19.7956 20.9373 20.3416 22.0852 20.3416 22.0852C20.1224 22.2114 19.7605 22.6126 19.8515 23.3241C20.0211 24.6509 20.596 24.987 20.9621 25.0149C21.1017 26.2528 22.4327 27.837 22.898 28.0677V30.136C21.8639 33.2383 13.5908 31.1701 13.5908 38.409H38.41C38.41 31.1701 30.137 33.2383 29.1029 30.136Z" fill="#DBDEE7"/>
@@ -38,7 +38,7 @@ should_show_order_history = should_redirect_to_order_history_microfrontend() and
 </button>
 
 <!-- Dropdown menu -->
-<div id="dropdownAvatar" class="hidden absolute nav-tab dropdown z-10 ml-3 bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600">
+<div id="dropdownAvatar" class="hidden absolute nav-tab dropdown z-10 ml-3 bg-white rounded divide-y divide-gray-100 shadow">
     <ul class="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownUserAvatarButton">
         % if resume_block:
             <li class="py-2 px-4 d-flex">
