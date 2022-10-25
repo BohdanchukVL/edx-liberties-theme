@@ -8,7 +8,7 @@ function initCookie() {
   acceptAllBtn.onclick = function () {
     setCookie(
       'cookies_settings',
-      '{"cookie": {"preferences": true, "performance": true}}',
+      '{"cookie": {"functional": true, "performance": true}}',
       365 * 10
     );
     closeModal();
@@ -16,7 +16,7 @@ function initCookie() {
   acceptBasicBtn.onclick = function () {
     setCookie(
       'cookies_settings',
-      '{"cookie": {"preferences": true, "performance": false}}',
+      '{"cookie": {"functional": true, "performance": false}}',
       365 * 10
     );
     closeModal();
@@ -42,7 +42,7 @@ function manageCookie() {
   var confirm = document.getElementById('confirm-cookie-manage');
   var cookieSetting = getCookie('cookies_settings');
 
-  var prefernceCheckValue = document.getElementById('preferenceCheck');
+  var functionalCheckValue = document.getElementById('functionalCheck');
   var performanceCheckValue = document.getElementById('performanceCheck');
 
   setManage.onclick = function () {
@@ -51,10 +51,10 @@ function manageCookie() {
     if (cookieSetting) {
       var setting = JSON.parse(cookieSetting);
 
-      if (setting.cookie.preferences) {
-        prefernceCheckValue.checked = true;
+      if (setting.cookie.functional) {
+        functionalCheckValue.checked = true;
       } else {
-        prefernceCheckValue.checked = false;
+        functionalCheckValue.checked = false;
       }
 
       if (setting.cookie.performance) {
@@ -68,7 +68,7 @@ function manageCookie() {
   confirm.onclick = function () {
     setCookie(
       'cookies_settings',
-      `{"cookie": {"preferences": ${prefernceCheckValue.checked}, "performance": ${performanceCheckValue.checked}}}`,
+      `{"cookie": {"functional": ${functionalCheckValue.checked}, "performance": ${performanceCheckValue.checked}}}`,
       365 * 10
     );
     body.classList.remove('cookie');
