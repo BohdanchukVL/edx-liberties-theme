@@ -2,11 +2,14 @@ header.header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 200;
 }
 #content {
   padding-top: 92px;
   min-height: 55vh;
+}
+#register-goals {
+  height: 120px;
 }
 
 .header .nav-links .nav-tab a {
