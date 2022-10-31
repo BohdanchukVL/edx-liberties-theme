@@ -19,6 +19,7 @@ function initCookie() {
       '{"cookie": {"functional": true, "performance": false}}',
       365 * 10
     );
+    _paq.push(['disableCookies']);
     closeModal();
   };
 
@@ -29,6 +30,16 @@ function initCookie() {
 
   if (!cookieSetting) {
     body.classList.add('i-cookie');
+  } else {
+    var setting = JSON.parse(cookieSetting);
+
+    if (!setting.cookie.functional) {
+      _paq.push(['disableCookies']);
+    }
+
+    if (setting.cookie.performance) {
+      
+    }
   }
 
   function closeModal() {
@@ -71,6 +82,11 @@ function manageCookie() {
       `{"cookie": {"functional": ${functionalCheckValue.checked}, "performance": ${performanceCheckValue.checked}}}`,
       365 * 10
     );
+    if (!performanceCheckValue.checked) {
+      _paq.push(['disableCookies']);
+    } else {
+      _paq.push(['setConsentGiven']);
+    }
     body.classList.remove('cookie');
   };
 }
