@@ -86,7 +86,9 @@ function manageCookie() {
     } else {
       _paq.push(['setConsentGiven']);
     }
-    body.classList.remove('cookie');
+    //body.classList.remove('cookie');
+    location.reload();
+    //return false;
   };
 }
 

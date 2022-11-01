@@ -41,39 +41,32 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
   </div>
 </div>
 
+
 <div id="manage-cookies">
   <div class="close"></div>
   <div id="target-inner">
     <div class="bg-white rounded p-8 sm:p-12 sm:mx-auto max-w-2xl">
       <div class="mb-8">
-        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab"
-          data-tabs-toggle="#manageCookieTab" role="tablist">
+        <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="myTab" data-tabs-toggle="#manageCookieTab" role="tablist">
           <li class="mr-6" role="presentation">
-            <button
-              class="text-base md:text-2xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange-500"
-              id="manage-tab" data-tabs-target="#manage" type="button" role="tab" aria-controls="manage"
-              aria-selected="false">
+            <button class="text-base md:text-2xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange-500 text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-500 border-blue-600 dark:border-blue-500" id="manage-tab" data-tabs-target="#manage" type="button" role="tab" aria-controls="manage" aria-selected="true">
               <span class="hoverable-highlight">Manage Cookies</span>
             </button>
           </li>
           <li class="mr-2" role="presentation">
-            <button
-              class="text-base md:text-2xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange-500"
-              id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about"
-              aria-selected="false">
+            <button class="text-base md:text-2xl text-gray-900 hoverable-static border-0 border-b-2 bg-transparent border-transparent border-solid border-orange-500 dark:border-transparent text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300" id="about-tab" data-tabs-target="#about" type="button" role="tab" aria-controls="about" aria-selected="false">
               <span class="hoverable-highlight">About Cookies</span>
             </button>
           </li>
         </ul>
       </div>
       <div id="manageCookieTab">
-        <div class="hidden" id="manage" role="tabpanel" aria-labelledby="manage-tab">
+        <div id="manage" role="tabpanel" data-tabs-toggle="cookiesTypesTabs">
           <div class="grid gap-4">
             <div class="flex space-x-6 items-center text-orange">
               <h3 class="flex-auto uppercase font-bold">Necessary</h3>
-              <button type="button"
-                class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
-                <span class="hoverable-highlight ">details</span>
+              <button id="necessaryTab" data-tabs-target="#necesseryCookies" role="tab" aria-controls="necesseryCookies" type="button" class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
+                <span class="hoverable-highlight text-black">details</span>
               </button>
               <div>
                 <div style="background-color:#56d280;" class="cookie-toggle flex mb-1 content-center justify-center rounded-full bg-green p-1 w-10">
@@ -84,9 +77,8 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
             </div>
             <div class="flex space-x-6 items-center">
               <h3 class="flex-auto uppercase font-bold">Performance</h3>
-              <button type="button"
-                class="text-sm text-black bg-transparent capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
-                <span class="hoverable-highlight">details</span>
+              <button id="performanceTab" data-tabs-target="#performanceCookies" role="tab" aria-controls="performanceCookies" type="button" class="text-sm text-black bg-transparent capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
+                <span class="hoverable-highlight text-black">details</span>
               </button>
               <label>
                 <input id="performanceCheck" type="checkbox" class="hidden cookie-toggle-input">
@@ -97,9 +89,8 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
             </div>
             <div class="flex space-x-6 items-center">
               <h3 class="flex-auto uppercase font-bold">FUNCTIONAL PREFERENCES</h3>
-              <button type="button"
-                class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
-                <span class="hoverable-highlight ">details</span>
+              <button id="functionalTab" data-tabs-target="#functionalCookies" role="tab" aria-controls="functionalCookies" type="button" class="text-sm bg-transparent text-black capitalize border-0 border-b-2 border-solid border-orange-500 hover:border-transparent hoverable-static">
+                <span class="hoverable-highlight text-black">details</span>
               </button>
               <label>
                 <input id="functionalCheck" type="checkbox" class="hidden cookie-toggle-input">
@@ -109,8 +100,8 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
               </label>
             </div>
           </div>
-          <div class="my-6 py-4 border-0 border-t border-b border-solid border-black">
-            <div>
+          <div id="cookiesTypesTabs" class="my-6 py-4 border-0 border-t border-b border-solid border-black">
+            <div id="necesseryCookies" role="tabpanel" aria-labelledby="necessaryTab" class="hidden">
               <h3 class="font-bold">Details of Necessary cookies</h3>
               <div class="my-2">
                 Necessary cookies help make a website usable by enabling basic
@@ -157,6 +148,167 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
                 </div>
               </div>
             </div>
+            <div id="performanceCookies" role="tabpanel" aria-labelledby="performanceTab" class="hidden">
+              <h3 class="font-bold">Details of Performance cookies</h3>
+              <div class="my-2">
+                Statistic cookies helps us to understand how visitors interact with our website by counting visits and traffic sources and reporting this information anonymously, so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and how our publications are viewed. We use Matomo Analytics for this purpose. If you do not allow these cookies, we will not know when you have visited our site and will not be able to monitor its overall performance. All information these cookies collect is aggregated and therefore anonymous, so we won't know who our visitors are.
+              </div>
+              <div class="divide-y divide-solid divide-gray-300 my-4"><div class="py-4"><div class="grid grid-cols-3 gap-2"><div><div class="text-xs text-black text-opacity-40">
+                Cookie Name
+              </div>
+              Matomo Analytics On-Premise
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Provider Name
+              </div>
+              matomo.com
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Expiry
+              </div>
+              Session
+            </div></div> <div class="text-xs text-black text-opacity-40 mt-2">
+            Purpose
+          </div> <div class="text-sm text-black text-opacity-80">Traffic statistics.</div> <div><div class="text-xs text-black text-opacity-40 mt-2">
+              Provider Domain
+            </div> <div class="text-sm text-black text-opacity-80">www.knowledgehub.liberties.eu</div></div></div><div class="py-4"><div class="grid grid-cols-3 gap-2"><div><div class="text-xs text-black text-opacity-40">
+                Cookie Name
+              </div>
+              Matomo Analytics On-Premise
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Provider Name
+              </div>
+              matomo.com
+            </div> 
+            <div style="overflow-wrap: break-word;">
+              <div class="text-xs text-black text-opacity-40">
+                Expiry
+              </div>
+              cookies.details_table_expiry_matomo_pk_id
+            </div></div> <div class="text-xs text-black text-opacity-40 mt-2">
+            Purpose
+          </div> <div class="text-sm text-black text-opacity-80">cookies.details_table_purpose_matomo_pk_id</div> <div><div class="text-xs text-black text-opacity-40 mt-2">
+              Provider Domain
+            </div> <div class="text-sm text-black text-opacity-80">www.knowledgehub.liberties.eu</div></div></div><div class="py-4"><div class="grid grid-cols-3 gap-2"><div><div class="text-xs text-black text-opacity-40">
+                Cookie Name
+              </div>
+              Matomo Analytics On-Premise
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Provider Name
+              </div>
+              matomo.com
+            </div> <div style="overflow-wrap: break-word;"><div class="text-xs text-black text-opacity-40">
+                Expiry
+              </div>
+              cookies.details_table_expiry_matomo_pk_ses
+            </div></div> <div class="text-xs text-black text-opacity-40 mt-2">
+            Purpose
+          </div> <div class="text-sm text-black text-opacity-80">cookies.details_table_purpose_matomo_pk_ses</div> <div><div class="text-xs text-black text-opacity-40 mt-2">
+              Provider Domain
+            </div> <div class="text-sm text-black text-opacity-80">www.knowledgehub.liberties.eu</div></div></div><div class="py-4"><div class="grid grid-cols-3 gap-2"><div><div class="text-xs text-black text-opacity-40">
+                Cookie Name
+              </div>
+              Matomo Analytics On-Premise
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Provider Name
+              </div>
+              matomo.com
+            </div> <div style="overflow-wrap: break-word;"><div class="text-xs text-black text-opacity-40">
+                Expiry
+              </div>
+              cookies.details_table_expiry_matomo_pk_testcookie
+            </div></div> <div class="text-xs text-black text-opacity-40 mt-2">
+            Purpose
+          </div> <div class="text-sm text-black text-opacity-80">cookies.details_table_purpose_matomo_pk_testcookie</div> <div><div class="text-xs text-black text-opacity-40 mt-2">
+              Provider Domain
+            </div> <div class="text-sm text-black text-opacity-80">www.knowledgehub.liberties.eu</div></div></div><div class="py-4"><div class="grid grid-cols-3 gap-2"><div><div class="text-xs text-black text-opacity-40">
+                Cookie Name
+              </div>
+              Matomo Analytics On-Premise
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Provider Name
+              </div>
+              matomo.com
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Expiry
+              </div>
+              
+            </div></div> <div class="text-xs text-black text-opacity-40 mt-2">
+            Purpose
+          </div> <div class="text-sm text-black text-opacity-80"></div> <div><div class="text-xs text-black text-opacity-40 mt-2">
+              Provider Domain
+            </div> <div class="text-sm text-black text-opacity-80">www.knowledgehub.liberties.eu</div></div></div><div class="py-4"><div class="grid grid-cols-3 gap-2"><div><div class="text-xs text-black text-opacity-40">
+                Cookie Name
+              </div>
+              Matomo Analytics On-Premise
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Provider Name
+              </div>
+              matomo.com
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Expiry
+              </div>
+              
+            </div></div> <div class="text-xs text-black text-opacity-40 mt-2">
+            Purpose
+          </div> <div class="text-sm text-black text-opacity-80"></div> <div><div class="text-xs text-black text-opacity-40 mt-2">
+              Provider Domain
+            </div> <div class="text-sm text-black text-opacity-80">www.knowledgehub.liberties.eu</div></div></div><div class="py-4"><div class="grid grid-cols-3 gap-2"><div><div class="text-xs text-black text-opacity-40">
+                Cookie Name
+              </div>
+              Matomo Analytics On-Premise
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Provider Name
+              </div>
+              matomo.com
+            </div> <div><div class="text-xs text-black text-opacity-40">
+                Expiry
+              </div>
+              
+            </div></div> <div class="text-xs text-black text-opacity-40 mt-2">
+            Purpose
+          </div> <div class="text-sm text-black text-opacity-80"></div> <div><div class="text-xs text-black text-opacity-40 mt-2">
+              Provider Domain
+            </div> <div class="text-sm text-black text-opacity-80">www.knowledgehub.liberties.eu</div></div></div></div>
+            </div>
+            <div id="functionalCookies" role="tabpanel" aria-labelledby="funcationalTab" class="hidden">
+              <h3 class="font-bold">Details of Functional Preferences cookies</h3>
+              <div class="my-2">
+                Functional cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third-party providers whose services we have added to our pages. If you do not allow these cookies, some or all of these services may not function properly. Prime examples are social media components like video players or other components like document viewers, quiz modules and image carousels we use in our articles.
+              </div>
+              <div class="divide-y divide-solid divide-gray-300 my-4">
+                <div class="py-4">
+                  <div class="grid grid-cols-3 gap-2">
+                    <div>
+                      <div class="text-xs text-black text-opacity-40">
+                        Cookie Name
+                      </div>
+                      YouTube
+                    </div>
+                    <div>
+                      <div class="text-xs text-black text-opacity-40">
+                        Provider Name
+                      </div>
+                      youtube.com
+                    </div>
+                    <div>
+                      <div class="text-xs text-black text-opacity-40">Expiry</div>
+                      -
+                    </div>
+                  </div>
+                  <div class="text-xs text-black text-opacity-40 mt-2">Purpose</div>
+                  <div class="text-sm text-black text-opacity-80">
+                    Video embedding feature.
+                  </div>
+                  <div>
+                    <div class="text-xs text-black text-opacity-40 mt-2">
+                      Provider Domain
+                    </div>
+                    <div class="text-sm text-black text-opacity-80">
+                      cookies.details_table_domain_use_youtube
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="hidden" id="about" role="tabpanel" aria-labelledby="about-tab">
@@ -167,19 +319,16 @@ from openedx.core.djangoapps.lang_pref.api import footer_language_selector_is_en
               the smooth operation of the website).
             </p>
             <p class="mt-0">You can change or withdraw your consent from the <strong>Cookie Settings</strong> on our
-              website at any time. Your consent applies to the following domain: <a class="text-gray-900"
-                href="https://www.liberties.eu/" rel="nofollow">www.liberties.eu</a>
+              website at any time. Your consent applies to the following domain: <a class="text-gray-900" href="https://www.liberties.eu/" rel="nofollow">www.liberties.eu</a>
             </p>
             <p class="mt-0">Learn more about who we are, how you can contact us and how we process personal data in
-              our <strong><a class="text-gray-900" href="https://www.liberties.eu/en/info/privacy-policy"
-                  rel="nofollow">Privacy Policy</a>.</strong>
+              our <strong><a class="text-gray-900" href="https://www.liberties.eu/en/info/privacy-policy" rel="nofollow">Privacy Policy</a>.</strong>
             </p>
           </div>
         </div>
       </div>
       <div class="pt-6 pb-4 sticky bottom-0 bg-white text-center">
-        <button id="confirm-cookie-manage"
-          class="inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center bg-orange-500 donation-buttons">OK</button>
+        <button id="confirm-cookie-manage" class="inline-flex items-center px-7 py-2 border border-transparent text-base font-bold lg:rounded-sm shadow-sm text-white justify-center bg-orange-500 donation-buttons">OK</button>
       </div>
     </div>
   </div>

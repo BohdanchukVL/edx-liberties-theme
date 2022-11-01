@@ -842,7 +842,7 @@ section.outside-app .verification-process h1,
   --tw-ring-opacity: 1;
   --tw-ring-color: rgba(0, 0, 0, var(--tw-ring-opacity));
   --tw-text-opacity: 1;
-  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  color: rgba(255, 255, 255, var(--tw-text-opacity))!important;
 }
 article:hover .course-title {
   --tw-bg-opacity: 1;
