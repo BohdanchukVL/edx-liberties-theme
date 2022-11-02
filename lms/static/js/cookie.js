@@ -16,10 +16,9 @@ function initCookie() {
   acceptBasicBtn.onclick = function () {
     setCookie(
       'cookies_settings',
-      '{"cookie": {"functional": true, "performance": false}}',
+      '{"cookie": {"functional": false, "performance": true}}',
       365 * 10
     );
-    _paq.push(['disableCookies']);
     closeModal();
   };
 
@@ -33,11 +32,8 @@ function initCookie() {
   } else {
     var setting = JSON.parse(cookieSetting);
 
-    if (!setting.cookie.functional) {
+    if (!setting.cookie.performance) {
       _paq.push(['disableCookies']);
-    }
-
-    if (setting.cookie.performance) {
     }
   }
 
@@ -55,24 +51,26 @@ function manageCookie() {
   var functionalCheckValue = document.getElementById('functionalCheck');
   var performanceCheckValue = document.getElementById('performanceCheck');
 
+  if (cookieSetting) {
+    var setting = JSON.parse(cookieSetting);
+
+    if (setting.cookie.functional) {
+      functionalCheckValue.checked = true;
+    } else {
+      functionalCheckValue.checked = false;
+    }
+
+    if (setting.cookie.performance) {
+      performanceCheckValue.checked = true;
+    } else {
+      performanceCheckValue.checked = false;
+    }
+  } else if (!cookieSetting) {
+    performanceCheckValue.checked = true;
+  }
+
   setManage.onclick = function () {
     body.classList.add('cookie');
-
-    if (cookieSetting) {
-      var setting = JSON.parse(cookieSetting);
-
-      if (setting.cookie.functional) {
-        functionalCheckValue.checked = true;
-      } else {
-        functionalCheckValue.checked = false;
-      }
-
-      if (setting.cookie.performance) {
-        performanceCheckValue.checked = true;
-      } else {
-        performanceCheckValue.checked = false;
-      }
-    }
   };
 
   confirm.onclick = function () {
@@ -86,14 +84,17 @@ function manageCookie() {
     } else {
       _paq.push(['setConsentGiven']);
     }
-    //body.classList.remove('cookie');
     location.reload();
-    //return false;
   };
 }
 
-document.addEventListener('DOMContentLoaded', initCookie);
-document.addEventListener('DOMContentLoaded', manageCookie);
+document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(() => {
+    console.log('')
+    initCookie();
+    manageCookie();
+  }, 3000)
+});
 
 function setCookie(name, value, days) {
   var expires = '';
