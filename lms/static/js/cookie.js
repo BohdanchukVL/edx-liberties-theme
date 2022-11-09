@@ -29,16 +29,18 @@ function initCookie() {
 
   if (!cookieSetting) {
     body.classList.add('i-cookie');
-  } else {
-    var setting = JSON.parse(cookieSetting);
-
-    if (!setting.cookie.performance) {
-      _paq.push(['disableCookies']);
-    }
   }
+  // else {
+  //   var setting = JSON.parse(cookieSetting);
+
+  //   if (!setting.cookie.performance) {
+  //     _paq.push(['disableCookies']);
+  //   }
+  // }
 
   function closeModal() {
     body.classList.remove('i-cookie');
+    location.reload();
   }
 }
 
@@ -62,6 +64,15 @@ function manageCookie() {
 
     if (setting.cookie.performance) {
       performanceCheckValue.checked = true;
+      /* INIT MATOMO */
+      var _mtm = (window._mtm = window._mtm || []);
+      _mtm.push({ 'mtm.startTime': new Date().getTime(), event: 'mtm.Start' });
+      var d = document,
+        g = d.createElement('script'),
+        s = d.getElementsByTagName('script')[0];
+      g.async = true;
+      g.src = 'https://matomo.liberties.eu/js/container_O2RsFPat.js';
+      s.parentNode.insertBefore(g, s);
     } else {
       performanceCheckValue.checked = false;
     }
@@ -79,21 +90,21 @@ function manageCookie() {
       `{"cookie": {"functional": ${functionalCheckValue.checked}, "performance": ${performanceCheckValue.checked}}}`,
       365 * 10
     );
-    if (!performanceCheckValue.checked) {
-      _paq.push(['disableCookies']);
-    } else {
-      _paq.push(['setConsentGiven']);
-    }
+    // if (!performanceCheckValue.checked) {
+    //   _paq.push(['disableCookies']);
+    // } else {
+    //   _paq.push(['setConsentGiven']);
+    // }
     location.reload();
   };
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  setTimeout(() => {
-    console.log('')
-    initCookie();
-    manageCookie();
-  }, 3000)
+  // setTimeout(() => {
+  //   console.log('');
+  // }, 3000);
+  initCookie();
+  manageCookie();
 });
 
 function setCookie(name, value, days) {
