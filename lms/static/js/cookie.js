@@ -12,6 +12,7 @@ function initCookie() {
       365 * 10
     );
     closeModal();
+    location.reload();
   };
   acceptBasicBtn.onclick = function () {
     setCookie(
@@ -20,6 +21,7 @@ function initCookie() {
       365 * 10
     );
     closeModal();
+    location.reload();
   };
 
   manage.onclick = function () {
@@ -40,7 +42,6 @@ function initCookie() {
 
   function closeModal() {
     body.classList.remove('i-cookie');
-    location.reload();
   }
 }
 
@@ -90,12 +91,12 @@ function manageCookie() {
       `{"cookie": {"functional": ${functionalCheckValue.checked}, "performance": ${performanceCheckValue.checked}}}`,
       365 * 10
     );
-    // if (!performanceCheckValue.checked) {
-    //   _paq.push(['disableCookies']);
-    // } else {
-    //   _paq.push(['setConsentGiven']);
-    // }
-    location.reload();
+    if (!performanceCheckValue.checked) {
+      _paq.push(['disableCookies']);
+    }
+    setTimeout(() => {
+      location.reload();
+    }, 100);
   };
 }
 

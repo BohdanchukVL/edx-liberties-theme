@@ -69,9 +69,6 @@ a:not(.btn), a:visited:not(.btn) {
 .courses-container .courses .course {
   border-bottom: 3px solid #ec5713;
 }
-.dashboard .main-container .my-courses .listing-courses {
-  margin-bottom: 70px;
-}
 a {
   text-decoration: inherit !important;
   text-decoration-line: inherit !important;
@@ -1232,6 +1229,7 @@ footer .container>div {
 }
 .subscribe-btn {
   --tw-shadow: inset 0px 0px 0px 1px #08c6c5;
+  border: 1px solid #08c6c5!important;
 }
 body .subscribe-btn:hover, .subscribe-btn:active, .subscribe-btn:focus {
   --tw-shadow: inset 0px 0px 0px 1px #08c6c5;

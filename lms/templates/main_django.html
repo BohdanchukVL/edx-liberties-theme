@@ -37,9 +37,9 @@
     {% load render_bundle from webpack_loader %}
     {% render_bundle "commons" %}
   <div class="window-wrap" dir="{{LANGUAGE_BIDI|yesno:'rtl,ltr'}}">
-    <a style="font-family: "Roboto Condensed" !important;" class="nav-skip" href="#main">{% trans "Skip to main content" as tmsg %} | {{ tmsg | force_escape }}</a>
+    <a style="font-family: 'Roboto Condensed' !important;" class="nav-skip" href="#main">{% trans "Skip to main content" as tmsg %} | {{ tmsg | force_escape }}</a>
 
-    <div class="content-wrapper" id="content" style="font-family: "Lato" !important;">
+    <div class="content-wrapper" id="content" style="font-family: 'Lato' !important;">
       {% block body %}{% endblock %}
       {% block bodyextra %}{% endblock %}
     </div>
